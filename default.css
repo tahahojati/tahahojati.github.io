@@ -1,6 +1,12 @@
-#udacity-logo {
-    width: 100px;
+header img {
+    width: 180px;
     margin-top: 1em;
+	border-radius: 100px
+}
+body {
+	max-width:900px;
+	margin-left: auto;
+	margin-right : auto;
 }
 hr {
     background-color: grey;
@@ -22,7 +28,11 @@ h3 {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
+#list img {
+	cursor: pointer;
+}
 #list p {
+	cursor: pointer;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     text-align: center;
