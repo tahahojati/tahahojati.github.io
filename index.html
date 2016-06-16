@@ -5,20 +5,27 @@
     <title> Taha Pourjalali's Portfolio </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="default.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
+    <div id="overlay">
+        <div>
+            <h1 > <strong> Taha Pourjalali </strong> </h1>
+            <img class="img-circle" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAUfAAAAJGQ2ZjEwY2MwLWYwMDUtNDBlZS04ZTM5LWY3YzEwYWEzZWZmNA.jpg" alt="Taha's pic" />
+            <h2>Programmer &amp; Web Developer</h2>
+        </div>
+    </div>
     <div class="container-fluid">
-        <header class="row" >
+        <header class="row">
             <div class="col-xs-4">
                 <img class="header img-responsive" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAUfAAAAJGQ2ZjEwY2MwLWYwMDUtNDBlZS04ZTM5LWY3YzEwYWEzZWZmNA.jpg" alt="Taha's pic">
             </div>
             <div class="col-xs-8 text-right text-uppercase">
                 <h1 class="header "> Taha Pourjalali </h1>
-                <h2 class="header"> Front-End Ninja </h2>
+                <h2 class="header"> Programmer &amp; Web Developer </h2>
             </div>
             <div class="col-xs-12">
                 <hr>
@@ -49,6 +56,14 @@
             </div>
         </div>
     </div>
+    <script>
+        setTimeout(function() {
+            document.getElementById("overlay").className = "fade";
+
+        }, 1500);
+    </script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

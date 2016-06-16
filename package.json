@@ -1,0 +1,23 @@
+{
+  "name": "tahahojati.github.io",
+  "version": "1.0.0",
+  "description": "My portfolio page, hosted on github",
+  "main": "index.html",
+  "scripts": {
+    "test": "tt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tahahojati/tahahojati.github.io.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Taha Pourjalali",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/tahahojati/tahahojati.github.io/issues"
+  },
+  "homepage": "https://github.com/tahahojati/tahahojati.github.io#readme",
+  "devDependencies": {}
+}

@@ -4,7 +4,7 @@ header img {
 	border-radius: 100px
 }
 body {
-	margin-bottom:30px; 
+	margin-bottom:30px;
 	max-width:900px;
 	margin-left: auto;
 	margin-right : auto;
@@ -38,4 +38,34 @@ h3 {
     font-weight: 400;
     text-align: center;
     font-size: 19px
+}
+#overlay {
+    color: white;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background:#5b23bd;
+    transition: opacity 2.5s;
+}
+
+#overlay * {
+    margin-top: 5%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#overlay img{
+    /*position: absolute;*/
+    display: block;
+    width:30%;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    /*top:35%;
+    left: 35%;*/
+}
+#overlay > div {
+    margin-top: 20vh;
 }
