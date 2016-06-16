@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
+<body ng-app="taha">
     <div id="overlay">
         <div>
             <h1> <strong> Taha Pourjalali </strong> </h1>
@@ -45,31 +45,15 @@
         </nav>
             <hr>
     </header>
+
+    <main ui-view="content" class="container-fluid">
+
+    </main>
     <!-- <div class="row">
         <div class="col-md-12">
             <img src="img/hamilton.jpg" alt="big img" id="big-img" class=" img-responsive center-block">
         </div>
     </div> -->
-    <main class="container-fluid" >
-        <section class="row">
-            <div class="col-xs-12">
-                <ul class="media-list">
-                    <li class="media">
-                        <div class="media-body">
-                            Lorem ipsum dolor sit amet, paulo admodum an sit, denique noluisse vim ne. Vix cu vocent regione insolens. Sed te purto debitis molestiae. Ut quod dico alienum nam, odio iudico oportere eu vis. Sea aliquam maluisset hendrerit et, sea eu expetendis efficiendi instructior, semper dictas mei ad. Aliquid appellantur qui ea, eum posse invidunt necessitatibus at, accusam apeirian per in.
-
-Vel et velit interpretaris. Sit ut porro melius habemus, consetetur dissentias vel cu. Iisque integre lucilius pro no, an dico veritus est. Brute recusabo mea ei, quo sint constituam deterruisset te, velit ubique ei mea. Cum eu inani copiosae aliquando. Cum an vide graece utamur, his et dico equidem vulputate. Exerci noster ea vix.
-
-Ad amet dicunt vix, modus oblique in duo. Sonet docendi in mea, pro ei omnis cetero copiosae. Pri et maiorum democritum disputando, augue nihil at ius. Te vis modo adipisci urbanitas, cu dicam alienum mediocritatem nec, mea an laoreet tincidunt. Cum ea recteque periculis assentior, veri liber cu pri, eum solum disputando et. His invidunt assueverit ad, enim movet voluptatibus ei est, cu rebum incorrupte mei. Sit quas minim labore id.
-                        </div>
-                        <div class="media-right media-middle">
-                            <img class="media-object" src="img/Frogger.png" />
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </main>
     <!-- <div class="row">
         <div class="col-md-12">
             <h3> Featured Work </h3>
@@ -100,6 +84,7 @@ Ad amet dicunt vix, modus oblique in duo. Sonet docendi in mea, pro ei omnis cet
         }, 3500);
     </script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 

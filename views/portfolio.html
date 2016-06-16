@@ -1,0 +1,30 @@
+<section class="row">
+    <div class="col-xs-12">
+        <ul class="media-list">
+            <li class="media" ng-repeat="project in projects ">
+                <div class="row">
+                    <div class="col-xs-5"  ng-if="$odd">
+                        <div class="media-middle media-left">
+                            <img class="media-object img-responsive " ng-src="{{project.img}}" />
+                        </div>
+                    </div>
+                    <div class="col-xs-7">
+
+                        <div class="media-body">
+                            <h3 class="media-heading"><strong>{{project.title}}</strong></h3>
+
+                            <p>
+                                {{project.description}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-5" ng-if="$even">
+                        <div class="media-middle media-right" >
+                            <img class="media-object img-responsive " ng-src="{{project.img}}" />
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
