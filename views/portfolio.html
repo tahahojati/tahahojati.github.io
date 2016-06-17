@@ -1,26 +1,26 @@
 <section class="row">
     <div class="col-xs-12">
         <ul class="media-list">
-            <li class="media" ng-repeat="project in projects ">
+            <li class="media" ng-repeat="myproject in projects ">
                 <div class="row">
-                    <div class="col-xs-5"  ng-if="$odd">
+                    <div class="col-xs-6"  ng-if="$odd">
                         <div class="media-middle media-left">
-                            <img class="media-object img-responsive " ng-src="{{project.img}}" />
+                            <a ui-sref="project({id: myproject.id})"><img class="media-object img-responsive " ng-src="{{myproject.img}}" /></a>
                         </div>
                     </div>
-                    <div class="col-xs-7">
+                    <div class="col-xs-6">
 
                         <div class="media-body">
-                            <h3 class="media-heading"><strong>{{project.title}}</strong></h3>
+                            <a ui-sref="project({id: myproject.id})"><h3 class="media-heading"><strong>{{myproject.title}}</strong></h3></a>
 
                             <p>
-                                {{project.description}}
+                                {{myproject.description}}
                             </p>
                         </div>
                     </div>
-                    <div class="col-xs-5" ng-if="$even">
+                    <div class="col-xs-6" ng-if="$even">
                         <div class="media-middle media-right" >
-                            <img class="media-object img-responsive " ng-src="{{project.img}}" />
+                            <a ui-sref="project({id: myproject.id})"><img class="media-object img-responsive " ng-src="{{myproject.img}}" /></a>
                         </div>
                     </div>
                 </div>
