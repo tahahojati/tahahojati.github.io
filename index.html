@@ -29,16 +29,18 @@
 
         <nav class="navbar navbar-static-top navbar-inverse">
             <ul class="nav navbar-nav">
-                <li ng-class="activeNav(0)" >
-                    <a>
-                        <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> My Portfolio</a>
+                <li ng-class="activeNav(0)" ng-click="setActive(0)">
+                    <a ui-sref="portfolio">
+                        <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> My Portfolio
+                    </a>
                 </li>
-                <li ng-class="activeNav(1)">
-                    <a >
-                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Bio</a>
+                <li ng-class="activeNav(1)" ng-click="setActive(1)">
+                    <a ui-sref="bio">
+                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Bio
+                    </a>
                 </li>
-                <li ng-class="activeNav(2)">
-                    <!-- <a ui-sref="app.menu"> --><a>
+                <li ng-class="activeNav(2)" ng-click="setActive(2)">
+                    <a ui-sref="contact">
                         <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact
                     </a>
                 </li>
@@ -82,7 +84,7 @@
         setTimeout(function() {
             document.getElementById("overlay").style.display = "none";
 
-        }, 3500);
+        }, 3000);
     </script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>

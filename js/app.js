@@ -40,15 +40,6 @@ angular.module('taha', ['ui.router', 'ngSanitize'])
         $urlRouterProvider.otherwise('/portfolio');
 
     })
-    .filter('evensFilter', function() {
-        return function(array) {
-            var out = [];
-            for (var i = 0; i < array.length; i = i + 2) {
-                out.push(i);
-            }
-            return out;
-        };
-    })
 
 .controller('AppCtrl', ['$scope', function($scope) {
     var nn = 0 ;

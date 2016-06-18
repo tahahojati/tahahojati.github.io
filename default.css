@@ -40,15 +40,15 @@ h3 {
 }*/
 
 #overlay {
-    display: none;
+    /*display: none;*/
     color: white;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 10000;
     height: 100%;
     width: 100%;
-    background: #5b23bd;
+    background: #5876a7;
     transition: opacity 2.5s;
 }
 #overlay * {
