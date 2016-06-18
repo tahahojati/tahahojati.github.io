@@ -94,7 +94,7 @@ h3 {
 .project-header {
     background: #0077c3;
     overflow: hidden;
-    height: 40vh;
+    height: 45vh;
     margin-bottom: 5vh;
     position: relative;
     width: 100%;
@@ -109,7 +109,7 @@ h3 {
     display: flex;
     background:rgba(255, 255, 255, 0.6);
     position: absolute;
-    height: 30%;
+    height: 25%;
     bottom: 10%;
     overflow: hidden;
 }
@@ -139,7 +139,7 @@ h3 {
     height: 100%;
     padding: 1em;
 
-    background: rgba(0, 29, 195, 0.35);
+    background: rgba(0, 29, 195, 0.55);
 }
 /*.side-overlay >div {
     position:absolute;
@@ -164,4 +164,7 @@ h3 {
     display: inline-block;
     vertical-align: middle;
     font-size:2.5em;
+}
+.body-row{
+    margin-bottom: 80px;
 }
