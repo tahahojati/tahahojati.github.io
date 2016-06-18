@@ -11,10 +11,10 @@
                     <div class="col-xs-6">
 
                         <div class="media-body">
-                            <a ui-sref="project({id: myproject.id})"><h3 class="media-heading"><strong>{{myproject.title}}</strong></h3></a>
+                            <a ui-sref="project({id: myproject.id})"><h3 class="media-heading"><strong>{{myproject.title}}</strong> </h3>
+                            <h5 ng-if="myproject.subtitle!=null" > ({{myproject.subtitle}}) </h5></a>
 
-                            <p>
-                                {{myproject.description}}
+                            <p ng-bind-html="myproject.description">
                             </p>
                         </div>
                     </div>

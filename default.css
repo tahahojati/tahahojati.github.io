@@ -1,18 +1,19 @@
-
 body {
-	margin-bottom:30px;
-	max-width:90%;
-	margin-left: auto;
-	margin-right : auto;
+    margin-bottom: 30px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 hr {
     background-color: grey;
     height: 3px;
-    margin:0
+    margin: 0
 }
+
 /*#big-img {
     width: 97%
 }*/
+
 h1 {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -26,6 +27,7 @@ h3 {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
+
 /*#list img {
 	cursor: pointer;
 }
@@ -36,59 +38,130 @@ h3 {
     text-align: center;
     font-size: 19px
 }*/
+
 #overlay {
     display: none;
     color: white;
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     z-index: 1;
     height: 100%;
     width: 100%;
-    background:#5b23bd;
+    background: #5b23bd;
     transition: opacity 2.5s;
 }
-
 #overlay * {
     margin-top: 5%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
-#overlay img{
+#overlay img {
     /*position: absolute;*/
     display: block;
-    width:30%;
+    width: 30%;
     /*margin-left: auto;
     margin-right: auto;*/
     /*top:35%;
     left: 35%;*/
 }
-#overlay > div {
+#overlay> div {
     margin-top: 20vh;
 }
-.navbar{
+.navbar {
     margin-bottom: 0;
 }
-
-.media-list  .media {
-    padding:30px;
-    border-bottom:1px solid #bbbbca;
+.media-list .media {
+    padding: 30px;
+    border-bottom: 1px solid #bbbbca;
     /*border-radius: 20px;*/
-    margin-top:40px;
+    margin-top: 40px;
 }
-.media .media-right, .media .media-left{
+.media .media-right, .media .media-left {
     perspective: 1000px;
     /*border: 1px solid #bbbbca;*/
 }
 .media .media-object {
     transition: transform 2s;
-
 }
- .media:hover   .media-right   .media-object{
-     transform: rotateY(-20deg);
+.media:hover .media-right .media-object {
+    transform: rotateY(-20deg);
 }
-
-.media:hover  .media-left  .media-object{
+.media:hover .media-left .media-object {
     transform: rotateY(20deg);
+}
+.project-header {
+    background: #0077c3;
+    overflow: hidden;
+    height: 40vh;
+    margin-bottom: 5vh;
+    position: relative;
+    width: 100%;
+}
+.project-big-img {
+    position: absolute;
+    top:0;
+    height: 100%;
+}
+.framwork-img-parent-div {
+    width: 100%;
+    display: flex;
+    background:rgba(255, 255, 255, 0.6);
+    position: absolute;
+    height: 30%;
+    bottom: 10%;
+    overflow: hidden;
+}
+.framework-img-div:first-child{
+    margin-left: auto;
+}
+.framework-img-div:last-child{
+    margin-right: auto;
+}
+.framework-img-div {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+}
+.framework-img {
+    max-width: 300px;
+    height: 100%;
+}
+.row{
+    height: 100%;
+}
+.row > div {
+    height: 100%;
+}
+.side-overlay{
+    outline: black, 1px;
+    height: 100%;
+    padding: 1em;
+
+    background: rgba(0, 29, 195, 0.35);
+}
+/*.side-overlay >div {
+    position:absolute;
+    left: 0;
+    top:0;
+    width: 93%;
+
+}*/
+.side-overlay  .title{
+    color: white;
+    text-shadow: 1px 1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, -1px -1px 0 #333;
+    margin-bottom: 10%;
+}
+.side-overlay a{
+    color:white;
+    text-shadow: 1px 1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, -1px -1px 0 #333;
+}
+.side-overlay i{
+    text-shadow: 1px 1px 0 white, 1px -1px 0 #777, -1px 1px 0 #777, -1px -1px 0 #777;
+     color: black;
+    margin-right: 0.8em;
+    display: inline-block;
+    vertical-align: middle;
+    font-size:2.5em;
 }

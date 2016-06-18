@@ -1,4 +1,4 @@
-angular.module('taha', ['ui.router'])
+angular.module('taha', ['ui.router','ngSanitize'])
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider.state('portfolio', {
                 url: '/portfolio',
@@ -55,44 +55,105 @@ angular.module('taha', ['ui.router'])
     $scope.projects = projectFactory;
 }])
 
+//****************************************************************************/
+
 .controller('ProjectController', ['$scope', 'projectFactory', '$stateParams', 'frameworkProvider', function($scope, projectFactory, $stateParams, frameworkProvider){
     $scope.project = projectFactory[parseInt($stateParams.id,10)];
     $scope.frameworks = [];
-    for(var i in $scope.projects){
-        $scope.frameworks.push(frameworkProvider['i']);
+
+    for(i of $scope.project.frameworks){
+        $scope.frameworks.push(frameworkProvider[i]);
     }
+    console.log($scope.frameworks);
 }])
 
 .factory('frameworkProvider',[function(){
     return {
         'angular': {
-            icon:'sddfd'
+            icon:'img/angular.png'
+        },
+        'javascript': {
+            icon: 'img/javascript.png'
+        },
+        'zf' : {
+            icon:'img/zf.png'
+        },
+        'ionic': {
+            icon:'img/ionic.png'
+        },
+        'cordova':{
+            icon: 'img/cordiva.png'
+        },
+        'bootstrap':{
+            icon: 'bootstrap.png'
         }
     };
 }])
 
 .factory('projectFactory',[function(){
-    var fac = [{
-            id: 1,
-            title: 'Frogger',
-            img: 'img/Frogger.png',
-            bigimg: 'img/Frogger.png',
+    var fac = [
+        {
+            id: 0,
+            title: 'OPIHI: Our Project in Hawaii\'s Intertidal ',
+            subtitle:'Under active development',
+            img: 'img/Frogger-pre.png',
+            bigimg: 'img/Frogger.png 1041w, img/Frogger-lg.png 1540w',
             github: 'https://github.com/tahahojati/FEWP3-Frogger',
             live: 'https://tahahojati.github.io/FEWP3-Frogger/',
             frameworks: ['angular', 'javascript'],
-            imgs: ['img/Frogger.png', 'img/Frogger.png'],
-            description: "Lorem ipsum dolor sit amet, paulo admodum an sit, denique noluisse vim ne. Vix cu vocent regione insolens. Sed te purto debitis molestiae. Ut quod dico alienum nam, odio iudico oportere eu vis. Sea aliquam maluisset hendrerit et, sea eu expetendis efficiendi<br/> nstructior, semper dictas mei ad. Aliquid appellantur qui ea, eum posse invidunt necessitatibus at, accusam apeirian per in. Vel et velit interpretaris. Sit ut porro melius habemus, consetetur dissentias vel cu. Iisque<br/>  integre lucilius pro no,an dico veritus est. Brute recusabo mea ei, quo sint constituam deterruisset te, velit.",
-            body:'Lorem ipsum dolor sit amet, paulo admodum an sit, denique noluisse vim ne. Vix cu vocent regione insolens. Sed te purto debitis molestiae. Ut quod dico alienum nam, odio iudico oportere eu vis. Sea aliquam maluisset hendrerit et, sea eu expetendis efficiendi<br/> nstructior, semper dictas mei ad. Aliquid appellantur qui ea, eum posse invidunt necessitatibus at, accusam apeirian per in. Vel et velit interpretaris. Sit ut porro melius habemus, consetetur dissentias vel cu. Iisque<br/>  integre lucilius pro no,an dico veritus est. Brute recusabo mea ei, quo sint constituam deterruisset te, velit ubique ei mea. Cum eu inani copiosae aliquando.Cum an vide graece utamur, his et dico equidem vulputate. Exercinoster ea vix. Ad amet dicunt vix, modus oblique in duo. Sonet docendi inmea, pro ei omnis cetero copiosae. Pri et maiorum democritum disputando, augue nihil at ius. Te vis modo adipisci urbanitas, cudicam alienum mediocritatem<br/>    nec, mea an laoreet tincidunt. Cum ea recteque periculis assentior, veri liber cu pri, eum solumdisputando et. His invidunt assueverit ad, enim movet voluptatibus ei est, cu rebum incorrupte mei. Sit quas minim labore',
+            description: "Lorem  deterruisset te, velit.",
+            bodyRows:[{text:'Lorem ipsum ', imgs: 'hello'}],
 
         },
         {
-                id: 1,
-                title: 'Frogger',
-                description: "Lorem ipsum dolor sit amet, paulo admodum an sit, denique noluisse vim ne. Vix cu vocent regione insolens. Sed te purto debitis molestiae. Ut quod dico alienum nam, odio iudico oportere eu vis. Sea aliquam maluisset hendrerit et, sea eu expetendis efficiendi<br/> nstructior, semper dictas mei ad. Aliquid appellantur qui ea, eum posse invidunt necessitatibus at, accusam apeirian per in. Vel et velit interpretaris. Sit ut porro melius habemus, consetetur dissentias vel cu. Iisque<br/>  integre lucilius pro no,an dico veritus est. Brute recusabo mea ei, quo sint constituam deterruisset te, velit ubique ei mea. Cum eu inani copiosae aliquando.Cum an vide graece utamur, his et dico equidem vulputate. Exercinoster ea vix. Ad amet dicunt vix, modus oblique in duo. Sonet docendi inmea, pro ei omnis cetero copiosae. Pri et maiorum democritum disputando, augue nihil at ius. Te vis modo adipisci urbanitas, cudicam alienum mediocritatem<br/>    nec, mea an laoreet tincidunt. Cum ea recteque periculis assentior, veri liber cu pri, eum solumdisputando et. His invidunt assueverit ad, enim movet voluptatibus ei est, cu rebum incorrupte mei. Sit quas minim labore            id.",
-                img: 'img/Frogger.png',
+            id: 1,
+            title: 'AASHTO LRFD Design Software',
+            subtitle:'Under active development',
+            img: 'img/Frogger-pre.png',
+            bigimg: 'img/Frogger.png 1041w, img/Frogger-lg.png 1540w',
+            github: 'https://github.com/tahahojati/FEWP3-Frogger',
+            live: 'https://tahahojati.github.io/FEWP3-Frogger/',
+            frameworks: ['angular', 'javascript'],
+            description: "Lorem  deterruisset te, velit.",
+            bodyRows:[{text:'Lorem ipsum ', imgs: 'hello'}],
 
-            },
+        },
+        {
+            id: 2,
+            title: 'Ristorante con Fusion',
+            img: 'img/Frogger-pre.png',
+            bigimg: 'img/Frogger.png 1041w, img/Frogger-lg.png 1540w',
+            github: 'https://github.com/tahahojati/FEWP3-Frogger',
+            live: 'https://tahahojati.github.io/FEWP3-Frogger/',
+            frameworks: ['angular', 'javascript'],
+            description: "Lorem  deterruisset te, velit.",
+            bodyRows:[{text:'Lorem ipsum ', imgs: 'hello'}],
 
+        },
+        {
+            id: 3,
+            title: 'Coffee in Honolulu',
+            img: 'img/Frogger-pre.png',
+            bigimg: 'img/Frogger.png 1041w, img/Frogger-lg.png 1540w',
+            github: 'https://github.com/tahahojati/FEWP3-Frogger',
+            live: 'https://tahahojati.github.io/FEWP3-Frogger/',
+            frameworks: ['angular', 'javascript'],
+            description: "Lorem  deterruisset te, velit.",
+            bodyRows:[{text:'Lorem ipsum ', imgs: 'hello'}],
+
+        },
+        {
+            id: 4,
+            title: 'Frogger',
+            img: 'img/Frogger-pre.png',
+            bigimg: 'img/Frogger.png 1041w, img/Frogger-lg.png 1540w',
+            github: 'https://github.com/tahahojati/FEWP3-Frogger',
+            live: 'https://tahahojati.github.io/FEWP3-Frogger/',
+            frameworks: ['angular', 'javascript'],
+            description: "Lorem  deterruisset te, velit.",
+            bodyRows:[{text:'Lorem ipsum ', imgs: 'hello'}],
+
+        },
     ];
     return fac;
 }] )
