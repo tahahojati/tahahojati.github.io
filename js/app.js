@@ -108,7 +108,6 @@ angular.module('taha', ['ui.router','ngSanitize'])
 .factory('projectFactory',[function(){
     var fac = [
         {
-            id: 0,
             title: 'OPIHI: Our Project in Hawaii\'s Intertidal ',
             subtitle:'Under active development',
             img: 'img/OPIHI-pre.png',
@@ -121,7 +120,6 @@ angular.module('taha', ['ui.router','ngSanitize'])
 
         },
         {
-            id: 1,
             title: 'AASHTO LRFD Design Software',
             subtitle:'Under active development',
             img: 'img/aashto-pre.png',
@@ -134,7 +132,6 @@ angular.module('taha', ['ui.router','ngSanitize'])
 
         },
         {
-            id: 2,
             title: 'Ristorante con Fusion',
             img: 'img/ristorante-pre.png',
             bigimg: 'img/ristorante.png 1041w, img/ristorante-lg.png 1540w',
@@ -160,7 +157,6 @@ angular.module('taha', ['ui.router','ngSanitize'])
 
         },
         {
-            id: 3,
             title: 'Coffee in Honolulu',
             img: 'img/coffee-pre.png',
             bigimg: 'img/coffee.png 1041w, img/coffee-lg.png 1540w',
@@ -174,7 +170,6 @@ angular.module('taha', ['ui.router','ngSanitize'])
 
         },
         {
-            id: 4,
             title: 'Frogger',
             img: 'img/Frogger-pre.png',
             bigimg: 'img/Frogger.png 1041w, img/Frogger-lg.png 1540w',
