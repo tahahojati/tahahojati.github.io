@@ -105,9 +105,11 @@ h3 {
     height: 100%;
 }
 .framwork-img-parent-div {
+    /*border-top: 2px #afafaf solid;
+    border-bottom: 2px #afafaf solid;*/
     width: 100%;
     display: flex;
-    background:rgba(255, 255, 255, 0.6);
+    background:rgba(255, 255, 255, 0.7);
     position: absolute;
     height: 25%;
     bottom: 10%;

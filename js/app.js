@@ -82,7 +82,7 @@ angular.module('taha', ['ui.router','ngSanitize'])
             icon:'img/ionic.png'
         },
         'cordova':{
-            icon: 'img/cordiva.png'
+            icon: 'img/cordova.png'
         },
         'bootstrap':{
             icon: 'img/bootstrap.png'
@@ -127,13 +127,27 @@ angular.module('taha', ['ui.router','ngSanitize'])
         {
             id: 2,
             title: 'Ristorante con Fusion',
-            img: 'img/Frogger-pre.png',
-            bigimg: 'img/Frogger.png 1041w, img/Frogger-lg.png 1540w',
-            github: 'https://github.com/tahahojati/FEWP3-Frogger',
-            live: 'https://tahahojati.github.io/FEWP3-Frogger/',
-            frameworks: ['angular', 'javascript'],
-            description: "Lorem  deterruisset te, velit.",
-            bodyRows:[{text:'Lorem ipsum ', imgs: 'hello'}],
+            img: 'img/ristorante-pre.png',
+            bigimg: 'img/ristorante.png 1041w, img/ristorante-lg.png 1540w',
+            github: 'https://github.com/tahahojati/conFusion-Angular',
+            frameworks: ['cordova', 'ionic', 'angular'],
+            description: "This project is a single page application for a fictitious restaurant, built using AngularJS.  I created this website by following coursera's online course on Angular. This website uses several features of Angular.js including two way databinding using controllers and models, use of ngResource for asynchronous data loading, and use of angular-ui-router for creating a single page application. <br/> I also created a hybrid mobile app for the restaurant the famous ionic platform.",
+            bodyRows:[{text:"<h2> Introduction </h2> <p> This project is a single page application for a fictitious restaurant, built using AngularJS.  I created this website by following coursera's online course on Angular. This website uses several features of Angular.js including two way databinding using controllers and models, use of ngResource for asynchronous data loading, and use of angular-ui-router for creating a single page application. <br/> I also created a hybrid mobile app for the restaurant the famous ionic platform. You may find the code for the hybrid app on its <a href=\"https://github.com/tahahojati/conFusion-Ionic\"> own github page </a> </p> <h2> The Website </h2> <p> The website featuree: <ol> <li>A home page that shows the restaurant's latest promotion</li> <li> A menu page that allows guests to choose the food category they would like to explore by choosing a tab </li> <li> Singular item pages that allow the guests to submit their feedback using a form. The form is validated using Angular's form validation capabilities </li> </ol>  </p>", imgs: '<img class="col-xs-12 col-sm-6  body-row" src="img/ristorante1.png"> <img class="col-xs-12 col-sm-6  body-row" src="img/ristorante2.png"> <img class="col-xs-12 col-sm-6 col-sm-offset-3  body-row" src="img/ristorante3.png">', layout:2},
+        {
+            text:"<h2>The Mobile App </h2><p>The code for the app is available on its <a href=\"https://github.com/tahahojati/conFusion-Ionic\"> own github page </a>. The app design takes advantage of ionic's splash screen and side bar view for a native look.  Angular UI Router was used to set up the navigation</p>",
+            imgs: '<img class="col-xs-12 col-sm-6" src="img/ristorante-splsh.png"/> <img class="col-xs-12 col-sm-6" src="img/ristorante-sidebar.png"/>'
+        }, {
+            text:"<p>Throughout the app resources are loaded dynamically via AJAX requests to a local server using the ngResource modul of angular. This includes the text and the images in the home page, the list of dishes in the menu page and the list of restaurant founders in the about page.</p>",
+            imgs: '<img class="col-xs-12 col-sm-6" src="img/ristorante-home.png"/> <img class="col-xs-12 col-sm-6" src="img/ristorante-about.png"/>'
+        },
+        {
+            text:"<p>Ionic modals were used extensively in design of the login and register views as well as reservation capability of the app. Cordova's wrappers were used in the project to access native device functions such as taking a picture with camera or choosing a picture from gallery.</p>",
+            imgs: '<img class="col-xs-12 col-sm-6" src="img/ristorante-register.png"/> <img class="col-xs-12 col-sm-6" src="img/ristorante-reserve.png"/>'
+        },
+        {
+            text:"<p>HTML5 local storage was used to persist data in JSON format between sessions of the app. Cordova wrappers were used to provide pop-up messages and notification messages in reacion to user's choices.</p>",
+            imgs: '<img class="col-xs-12 col-sm-6 body-row" src="img/ristorante-menu.png"/> <img class="col-xs-12 col-sm-6 body-row" src="img/ristorante-menu2.png"/><img class="col-xs-12 col-sm-6" src="img/ristorante-menu3.png"/> <img class="col-xs-12 col-sm-6" src="img/ristorante-favorites.png"/>'
+        }],
 
         },
         {
