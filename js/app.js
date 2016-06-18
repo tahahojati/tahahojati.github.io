@@ -92,6 +92,15 @@ angular.module('taha', ['ui.router','ngSanitize'])
         },
         'html5':{
             icon: 'img/html5.png'
+        },
+        'knockout':{
+            icon:'img/knockout.png',
+        },
+        'maps':{
+            icon:'img/maps.png'
+        },
+        'jquery':{
+            icon:'img/jquery.png'
         }
     };
 }])
@@ -153,13 +162,15 @@ angular.module('taha', ['ui.router','ngSanitize'])
         {
             id: 3,
             title: 'Coffee in Honolulu',
-            img: 'img/Frogger-pre.png',
-            bigimg: 'img/Frogger.png 1041w, img/Frogger-lg.png 1540w',
-            github: 'https://github.com/tahahojati/FEWP3-Frogger',
+            img: 'img/coffee-pre.png',
+            bigimg: 'img/coffee.png 1041w, img/coffee-lg.png 1540w',
+            github: 'https://github.com/tahahojati/FEWP5A-Honolulu-Coffee',
             live: 'https://tahahojati.github.io/FEWP3-Frogger/',
-            frameworks: ['angular', 'javascript'],
-            description: "Lorem  deterruisset te, velit.",
-            bodyRows:[{text:'Lorem ipsum ', imgs: 'hello'}],
+            docs: 'https://tahahojati.github.io/FEWP5A-Honolulu-Coffee/out/index.html',
+            frameworks: ['knockout', 'javascript', 'maps', 'jquery'],
+            description: "This project lists some of the best coffeeshops in Honolulu. The location of the shops is shown on an embedded map. The FourSquare rating for each location is also provided. This project takes advantage of KnockoutJS and jQuery's AJAX functions to get data from FourSquare.com via asynchronous requests.",
+            bodyRows:[{text:"<h2>Introduction </h2> <p>This project lists some of the best coffeeshops in Honolulu. The location of the shops is shown on an embedded map. The FourSquare rating for each location is also provided. This project takes advantage of KnockoutJS and jQuery's AJAX functions to get data from FourSquare.com via asynchronous requests. <br/> This project makes extensive use of Gulp task runner specifically to run JSLint and to minimize the javascript and html files</p>", imgs: '<img class="img-responsive" src="img/coffee-pre.png"/>'},
+        {text:"<h2>Documentation </h2> <p>The javascript code in this project was fully documented using JSDoc. Compiled documentation of the project can be found <a href=\"https://tahahojati.github.io/FEWP5A-Honolulu-Coffee/out/index.html\"> here. </a></p>", imgs: '<img class="img-responsive" src="img/coffee-docs.png"/>'}],
 
         },
         {
@@ -168,8 +179,8 @@ angular.module('taha', ['ui.router','ngSanitize'])
             img: 'img/Frogger-pre.png',
             bigimg: 'img/Frogger.png 1041w, img/Frogger-lg.png 1540w',
             github: 'https://github.com/tahahojati/FEWP3-Frogger',
-            live: 'https://tahahojati.github.io/FEWP3-Frogger/',
-            frameworks: ['angular', 'javascript'],
+            live: 'https://tahahojati.github.io/FEWP5A-Honolulu-Coffee/dist/index.html',
+            frameworks: ['knockout', 'javascript',''],
             description: "Lorem  deterruisset te, velit.",
             bodyRows:[{text:'Lorem ipsum ', imgs: 'hello'}],
 
