@@ -40,7 +40,7 @@ h3 {
 }*/
 
 #overlay {
-    display: none;
+    /*display: none;*/
     color: white;
     position: fixed;
     top: 0;
@@ -143,13 +143,7 @@ h3 {
 
     background: rgba(0, 29, 195, 0.55);
 }
-/*.side-overlay >div {
-    position:absolute;
-    left: 0;
-    top:0;
-    width: 93%;
 
-}*/
 .side-overlay  .title{
     color: white;
     text-shadow: 1px 1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, -1px -1px 0 #333;

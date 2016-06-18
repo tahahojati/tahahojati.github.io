@@ -32,13 +32,14 @@ angular.module('taha', ['ui.router', 'ngSanitize'])
 
     })
 
-.controller('AppCtrl', ['$scope', function($scope) {
-    var nn = 0 ;
-    $scope.setActive = function(index){
-        nn = index;
-    }
+.controller('AppCtrl', ['$scope', '$state', function($scope, $state) {
     $scope.activeNav = function(index){
-        if(index === nn){return 'active';}
+        if(index === 1 && $state.is('bio')){
+            return 'active';
+        }
+        else if (index === 0 && !$state.is('bio')) {
+            return 'active';
+        }
         else {return ''; }
     };
 }])
