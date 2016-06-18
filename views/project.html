@@ -1,5 +1,5 @@
 <aside class="project-header hidden-xs">
-    <img class="project-big-img" ng-srcset="{{project.bigimg}}" sizes="90vw"/>
+    <img class="project-big-img" ng-srcset="{{project.bigimg}}" sizes="90vw" />
     <div class="row">
         <div class="col-lg-7 col-xs-8">
 
@@ -12,15 +12,15 @@
         </div>
         <div class="col-xs-4 col-lg-offset-1 side-overlay">
             <!-- <div> -->
-                <h1 class="title"><strong>{{project.title}}</strong></h1>
-                <h3 ng-if="project.subtitle != null" class="title" ng-bind="project.subtitle"></h3>
-                <p>
-                    <a ng-href="{{project.github}}"> <i class="fa fa-github" aria-hidden="true"></i>View the code on GitHub</a>
-                    <br/>
-                </p>
-                <p>
-                    <a ng-if="project.live != null" ng-href="{{project.live}}"><i class="fa fa-home" aria-hidden="true"></i> Live preview </a>
-                </p>
+            <h1 class="title"><strong>{{project.title}}</strong></h1>
+            <h3 ng-if="project.subtitle != null" class="title" ng-bind="project.subtitle"></h3>
+            <p>
+                <a ng-href="{{project.github}}"> <i class="fa fa-github" aria-hidden="true"></i>View the code on GitHub</a>
+                <br/>
+            </p>
+            <p>
+                <a ng-if="project.live != null" ng-href="{{project.live}}"><i class="fa fa-home" aria-hidden="true"></i> Live preview </a>
+            </p>
             <!-- </div> -->
         </div>
     </div>
@@ -28,7 +28,9 @@
 
 <div class="row body-row" ng-repeat="myrow in project.bodyRows">
 
-<div class="col-sm-12 col-md-6 " ng-bind-html="myrow.text"> </div>
-<div class="col-sm-12 col-md-6 col-lg-5 col-lg-push-1" ng-bind-html="myrow.imgs"></div>
+    <div  ng-class="{'col-sm-12 col-md-6': myrow.layout ==null, 'col-sm-12' :myrow-layout!=null  }" ng-bind-html="myrow.text"> </div>
+    <div  ng-class="{'col-sm-12 col-md-6 col-lg-5 col-lg-push-1' : myrow.layout ==null, 'col-sm-12' :myrow-layout!=null}" ng-bind-html="myrow.imgs"></div>
+
+
 
 </div>
