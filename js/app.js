@@ -18,15 +18,6 @@ angular.module('taha', ['ui.router', 'ngSanitize'])
                     }
                 }
             })
-            .state('contact', {
-                url: '/contact',
-                views: {
-                    content: {
-                        templateUrl: 'views/contact.html',
-                        //controller:'PortfolioController',
-                    }
-                }
-            })
             .state('project', {
                 url: '/project/:id',
                 views: {
