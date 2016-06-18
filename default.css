@@ -40,7 +40,7 @@ h3 {
 }*/
 
 #overlay {
-    /*display: none;*/
+    display: none;
     color: white;
     position: fixed;
     top: 0;
@@ -169,4 +169,23 @@ h3 {
 }
 .body-row{
     margin-bottom: 80px;
+}
+.stick-right{
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    transform: rotate(-90deg);
+    position: fixed;
+    right: -4em ;
+    padding-bottom:  5em;
+    top:30%;
+    transition: transform 0.5s ease;
+}
+.stick-right:active{
+    -webkit-transform:rotate(-90deg) translateY(-3em);
+    -moz-transform:rotate(-90deg) translateY(-3em);
+    -o-transform: rotate(-90deg) translateY(-3em);
+    -ms-transform:rotate(-90deg) translateY(-3em);
+    transform: rotate(-90deg) translateY(-3em);
 }
