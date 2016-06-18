@@ -40,7 +40,7 @@ h3 {
 }*/
 
 #overlay {
-    display: none;
+    /*display: none;*/
     color: white;
     position: fixed;
     top: 0;
@@ -188,4 +188,8 @@ h3 {
     -o-transform: rotate(-90deg) translateY(-3em);
     -ms-transform:rotate(-90deg) translateY(-3em);
     transform: rotate(-90deg) translateY(-3em);
+}
+.project-img-div  img {
+    box-shadow: 10px 10px 5px #888888;
+    border: grey 1px solid;
 }

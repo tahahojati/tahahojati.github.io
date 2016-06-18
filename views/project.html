@@ -32,7 +32,7 @@
 <div class="row body-row" ng-repeat="myrow in project.bodyRows">
 
     <div  ng-class="{'col-sm-12 col-md-6': myrow.layout ==null, 'col-sm-12' :myrow-layout!=null  }" ng-bind-html="myrow.text"> </div>
-    <div  ng-class="{'col-sm-12 col-md-6 col-lg-5 col-lg-push-1' : myrow.layout ==null, 'col-sm-12' :myrow-layout!=null}" ng-bind-html="myrow.imgs"></div>
+    <div  class="project-img-div" ng-class="{'col-sm-12 col-md-6 col-lg-5 col-lg-push-1' : myrow.layout ==null, 'col-sm-12' :myrow-layout!=null}" ng-bind-html="myrow.imgs"></div>
 
 
 
