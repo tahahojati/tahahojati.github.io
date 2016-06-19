@@ -122,7 +122,7 @@ angular.module('taha', ['ui.router', 'ngSanitize'])
         img: 'img/aashto-pre.png',
         bigimg: 'img/aashto.png 1041w, img/aashto-lg.png 1540w',
         github: 'https://github.com/tahahojati/AASHTO',
-        live: 'http://test2.lowerealtyhawaii.com',
+        live: 'http://test.lowerealtyhawaii.com',
         frameworks: ['zf', 'angular', 'bootstrap'],
         description: "This website is being designed to assist structural engineers in their Aashto LFRD bridge design through providing important calculations and saving them on cloud for later access.  The project is still in its infancy as I only started it one week ago.  The expected release date for the project is end of August.",
         bodyRows: [{
