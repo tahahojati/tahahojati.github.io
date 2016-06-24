@@ -40,7 +40,7 @@ h3 {
 }*/
 
 #overlay {
-    /*display: none;*/
+    display: none;
     color: white;
     position: fixed;
     top: 0;

@@ -55,8 +55,8 @@ angular.module('taha', ['ui.router', 'ngSanitize'])
     $scope.project = projectFactory[parseInt($stateParams.id, 10)];
     $scope.frameworks = [];
 
-    for (i of $scope.project.frameworks) {
-        $scope.frameworks.push(frameworkProvider[i]);
+    for (i in $scope.project.frameworks) {
+        $scope.frameworks.push(frameworkProvider[$scope.project.frameworks[i]]);
     }
     console.log($scope.frameworks);
 }])
