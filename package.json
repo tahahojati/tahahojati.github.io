@@ -4,8 +4,8 @@
   "description": "My portfolio page, hosted on github",
   "main": "index.html",
   "scripts": {
-    "test": "tt"
-  },
+      "postinstall": "bower install"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tahahojati/tahahojati.github.io.git"

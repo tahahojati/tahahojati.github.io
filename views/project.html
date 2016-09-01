@@ -15,7 +15,7 @@
             <h1 class="title"><strong>{{project.title}}</strong></h1>
             <h3 ng-if="project.subtitle != null" class="title" ng-bind="project.subtitle"></h3>
             <p>
-                <a ng-href="{{project.github}}"> <i class="fa fa-github" aria-hidden="true"></i>View the code on GitHub</a>
+                <a ng-if="project.github != null" ng-href="{{project.github}}"> <i class="fa fa-github" aria-hidden="true"></i>View the code on GitHub</a>
                 <br/>
             </p>
             <p>
