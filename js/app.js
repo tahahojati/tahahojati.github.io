@@ -119,8 +119,8 @@ angular.module('taha', ['ui.router', 'ngSanitize'])
         frameworks: ['zf', 'jquery', 'bootstrap', 'd3'],
         description: "OPIHI is a school-based monitoring program of Hawaii’s rocky intertidal where students improve their scientific skills while providing assistance gathering data in an area that has not been well studied in Hawaii. <br/> <br/> While taking part in OPIHI, students will learn about topics in marine ecology and conservation, species identification, and sampling techniques. Most importantly, students will build their confidence and interest in science. OPIHI provides opportunities for students to develop and investigate their own questions within the framework of monitoring biodiversity in the intertidal.",
         bodyRows: [{
-            text: "<h2> Introduction </h2> <p> OPIHI is a school-based monitoring program of Hawaii’s rocky intertidal where students improve their scientific skills while providing assistance gathering data in an area that has not been well studied in Hawaii. <br/> <br/> While taking part in OPIHI, students will learn about topics in marine ecology and conservation, species identification, and sampling techniques. Most importantly, students will build their confidence and interest in science. OPIHI provides opportunities for students to develop and investigate their own questions within the framework of monitoring biodiversity in the intertidal. </p>" 
-	    + "<p> I was acted as the lead developer to design a website and database in order to facilitate data input for the students. The website was developed with php and Zend Framework.  It was designed to be flexible in options that it offers to the teachers, and the students while also enforcing common sense scientific rigors necessary for data collection and entry.</p>",
+            text: "<h2> Introduction </h2> <p> OPIHI is a school-based monitoring program of Hawaii’s rocky intertidal where students improve their scientific skills while providing assistance gathering data in an area that has not been well studied in Hawaii. <br/> <br/> While taking part in OPIHI, students learn about topics in marine ecology and conservation, species identification, and sampling techniques. Most importantly, students build their confidence and interest in science. OPIHI provides opportunities for students to develop and investigate their own questions within the framework of monitoring biodiversity in the intertidal. </p>" 
+	    + "<p> I acted as the lead developer to design a website and database in order to facilitate data input for the students. The website was developed with php and Zend Framework.  It was designed to be flexible in options that it offers to the teachers, and the students while also enforcing common sense scientific rigors necessary for data collection and entry.</p>",
             imgs: '<img class="img-responsive" src="img/OPIHI3.png"> '
         }, {
             text: "<h2> The data collected in the project is publicly available.  You may visit the website to download the data or use its visual analytics tools to compare the state of intertidal to how it was in previous years.  If you have any feedback, please feel free to email me or the CRDG team :)",
@@ -129,15 +129,16 @@ angular.module('taha', ['ui.router', 'ngSanitize'])
 
     }, {
         title: 'AASHTO LRFD Design Software',
-        subtitle: 'Under active development',
+        subtitle: 'Single page application',
         img: 'img/aashto-pre.png',
         bigimg: 'img/aashto.png 1041w, img/aashto-lg.png 1540w',
         // github: 'https://github.com/tahahojati/AASHTO',
         live: 'http://aashtobridgedesign.com/',
         frameworks: ['mean', 'node', 'bootstrap', 'angular'],
-        description: "This website is being designed to assist structural engineers in their Aashto LFRD bridge design through providing important calculations and saving them on cloud for later access. ",
+        description: "This website assists structural engineers in their Aashto LFRD bridge design through providing important calculations and saving them on cloud for later access. The calculations can be printed as pdf at any time.",
         bodyRows: [{
-            text: "<h2>AASHTO LFRD Bridge Design </h2> <p>This website is being designed to assist structural engineers in their Aashto LFRD bridge design through providing important calculations and saving them on cloud for later access.  </p>",
+            text: "<h2>AASHTO LFRD Bridge Design </h2> <p>This website assists structural engineers in their Aashto LFRD bridge design through providing important calculations and saving them on cloud for later access.  The calculations can be converted to pdf documents and printed at users's request.</p>"
+			+ "<p>I developed the website using node.js and MEAN stack framework. The backend was designed with SOA philosophy (Service Oriented Architecture) in mind, so that it can easily support mobile app clients or external api requests.  The front-end is developed as a single page application using Angular.js </p>",
             imgs: '<div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/aashto1.png" > </div> <div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/aashto2.png" > </div> <div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/aashto3.png" > </div>',
             layout: 2
         }],
