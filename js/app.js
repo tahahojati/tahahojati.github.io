@@ -150,7 +150,7 @@ angular.module('taha', ['ui.router', 'ngSanitize'])
 		title: 'Farm Akamai',
 		subtitle: '(Second place winner of Hawaii Agricultural Hackathon (Agathon 2018))',
 		img: 'img/farmsafe_proto1.png',
-		bigimage: 'img/farmsafe_big.jpg', 
+		bigimg: 'img/farmsafe_big.jpg', 
 		github: 'https://github.com/tahahojati/FarmSafe_Agathon_2018_2',
 		frameworks:['android'],
 		description: "This android app was designed for Agathon 2018.  I was the lead developer in a team of three three software engineers.  Together we were able to write an skeleton app in under 18 hours.  Our app was recognized as the second best project in the Hachathon earning us $2000 and a big sense of achievement.",
