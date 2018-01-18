@@ -84,6 +84,9 @@ angular.module('taha', ['ui.router', 'ngSanitize'])
         'ionic': {
             icon: 'img/ionic.png'
         },
+		'android':{
+			icon: 'img/android.jpg'
+		},
         'cordova': {
             icon: 'img/cordova.png'
         },
@@ -143,7 +146,27 @@ angular.module('taha', ['ui.router', 'ngSanitize'])
             layout: 2
         }],
 
-    }, { //<img\W*(class="[\w- ]*")([^>]*)>
+    }, {
+		title: 'Farm Akamai',
+		subtitle: '(Second place winner of Hawaii Agricultural Hackathon (Agathon 2018))',
+		img: 'img/farmsafe_proto1.png',
+		github: 'https://github.com/tahahojati/FarmSafe_Agathon_2018_2',
+		frameworks:['android'],
+		description: "This android app was designed for Agathon 2018.  I was the lead developer in a team of three three software engineers.  Together we were able to write an skeleton app in under 18 hours.  Our app was recognized as the second best project in the Hachathon earning us $2000 and a big sense of achievement.",
+		bodyRows:[{
+			{
+			text: "<p>This android app was designed for Agathon 2018.  I was the lead developer in a team of three three software engineers.  Together we were able to write an skeleton app in under 18 hours.  Our app was recognized as the second best project in the Hachathon earning us $2000 and a big sense of achievement.</p>" 
+			+ "<p>The app is meant to address an essential issue in the Hawaii Farms.  Every year, a population of farmers and laborers immigrate to Hawaii.  These individuals frequently do not speak English and are not familiar to the American standards of farming.  Currently, there is no affordable way to educate these farmers.  Moreover, department of Agriculture does not have a dependable way to assure that a new farmer is familiar with regulations.  This can lead to food safety issues due to inadequate adherence to safety standards among other issues. </p>"
+			+"<p>We chose to develop an application that can teach farmers about Agricultural methods and standards in a variety of languages. We chose the mobile platform over web/desktop as we understood that the app must be available to farmers in the field without any network connection.  Moreover, we wanted a simple design that is mostly self explanatory.  The pictures below show our prototype created using proto.io</p>",
+			imgs: '<div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/farmsafe_proto1.png" > </div> <div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/farmsafe_proto2.png" > </div> <div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/farmsafe_proto3.png" > </div> <div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/farmsafe_proto4.png" > </div> <div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/farmsafe_proto5.png" > </div>',
+			layout: 2,
+			},
+			text: "<p> We spent just under 16 consecutive hours implementing the app.  Unfortunately, the version that we presented at the Hackathon could not play videos or administer tests.  However, we are considering the possibility of continuing the project and presenting it to DOA as a solution to a common problem.  We are also aware that training in other languages is necessary in a variety of fields other than farming and plan to watch for other opportunities where this technology can be used to improve efficiency.</p>",
+			imgs: '<div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/farmsafe1.png" > </div> <div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/farmsafe2.png" > </div> <div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/farmsafe3.png" > </div> <div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/farmsafe4.png" > </div> <div class="col-xs-12 col-sm-4  body-row" > <img class="img-responsive" src="img/farmsafe5.png" > </div>',
+			layout: 2,
+		} ]		
+		
+	}, { //<img\W*(class="[\w- ]*")([^>]*)>
         title: 'Ristorante con Fusion',
         img: 'img/ristorante-pre.png',
         bigimg: 'img/ristorante.png 1041w, img/ristorante-lg.png 1540w',
