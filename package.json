@@ -1,10 +1,10 @@
 {
   "name": "tahahojati.github.io",
-  "version": "1.0.0",
-  "description": "My portfolio page, hosted on github",
+  "version": "2.0.0",
+  "description": "My portfolio page, hosted on tpourjalali.com",
   "main": "index.html",
   "scripts": {
-      "postinstall": "bower install"
+      "postinstall-old": "bower install"
     },
   "repository": {
     "type": "git",
