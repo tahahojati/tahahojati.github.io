@@ -2,7 +2,7 @@
     <div id="nav_bar">
         <a class="logo" rel="index" href="https://jacekjeznach.com/">
             <img src="../assets/logo.png" alt="Developer, Software Engineer">
-            <img src="../assets/logo_sub.png" alt="Developer, Software Engineer">
+            <!-- <img src="../assets/logo_sub.png" alt="Developer, Software Engineer"> -->
         </a>
         <nav class="en">
             <router-link rel="index" to="/"  activeClass="active" exact>

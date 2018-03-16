@@ -28,5 +28,8 @@
 			</canvas>
 		</div>
 	</div>
+	<span class="tags bottom-tags"> &nbsp;&nbsp;&nbsp;&lt;/body&gt;
+		<br/> &lt;/html&gt;
+	</span>
 </div>
 </template>
