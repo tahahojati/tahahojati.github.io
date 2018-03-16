@@ -5,10 +5,8 @@
 		</span>
 		<div class="text-zone">
 			<h1 aria-label=" Hi,
-			I’m
-			
-			ack,
-			web developer.
+			I’m Taha,
+			Developer, Software Engineer.
 			" class="blast-root"> <span class="blast" aria-hidden="true" style="opacity: 1;">H</span><span class="blast" aria-hidden="true" style="opacity: 1;">i</span><span class="blast" aria-hidden="true" style="opacity: 1;">,</span>
 			<br> <span class="blast" aria-hidden="true" style="opacity: 1;">I</span><span class="blast" aria-hidden="true" style="opacity: 1;">’</span><span class="blast" aria-hidden="true" style="opacity: 1;">m</span>
 			
