@@ -6,25 +6,24 @@
 		<div class="text-zone">
 			<h1> About me
 			</h1>
-			<p>Everything started with passion to web technologies (Flash, HTML).  In 2008 I got my first commercial work as a junior front-end developer in MUSO agency located in PL, Szczecin.
+			<p> I loved math and science since I was a kid. Writing code and making electronics were my side "hobbies" until I graduated from college in 2016.  I have a B.S. in physics; hopefully some day, I will have a noble prize in physics :)
 			</p>
-			<p>Two years later I moved to PL, Poznań and I started to work in one of the two offices of the
-				<a href="https://www.goldensubmarine.com" target="_blank">GoldenSubmarine
-				</a>  agency.
+			<p><strong>Why you should not hire me:</strong></p>
+			<p>I do not have a computer science degree.  I may be able to code and have completed a bunch of projects but there are glaring gaps in my knowledge of computers. Also, I have been only working for a few years; I'm a junior dev.
 			</p>
-			<p>In 2011 I joined to Really Simple Software, US, California startup &#8220;Simple TV&#8221;.
+			<p>
+			<strong>Why you should hire me:</strong>
 			</p>
-			<p>In multinational team we where building large Single Page Application for innovative DVR.
+			<p>I'm funny! Also, I work hard and love learning. The gaps in my knowledge get smaler everyday because I read everyday.  I am self-taught so you know I have initiative, and since I don't do my learning for the sake a grade, I do not cram and my knowledge is deep.  I only have a few years of experience but a look at the number of projects on my github will show you that I have a lot of result to show for those years. 
 			</p>
-			<p>Rest of my experience is  successful cooperatiion as a  freelencer with IT companies and professionals from Poland, Europe, US and Australia.
+			<p><strong> Things I like: </strong><br/>pianos and guitars, soccer, tennis, good hikes, money, Paint Nite
 			</p>
-			<p>Right now I work as a external consultant with
-				<a href="https://totheend.co.uk/" target="_blank">ToTheEnd
-				</a> , content marketing agency based in London &amp; King&#8217;s Lynn, UK.
+			<p> <strong> Things I do not like: </strong><br/> bad hikes, politics, lack of ice-cream, most of TV
+			<p>
+
 			</p>
 			<p>&nbsp;
 			</p>
-			<img style="max-width:95%;margin-top: 40px;" src="https://jacekjeznach.com/wp-content/themes/jj/img/timeline.png" alt=""/>
 			<div class="clear">
 			</div>
 		</div>
