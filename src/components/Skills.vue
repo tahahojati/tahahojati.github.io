@@ -18,9 +18,7 @@
 	</div>
 	<div class="skills-charts">
 		<div id="myCanvasContainer">
-			<canvas width="500" height="500" id="myCanvas">
-			<!-- TODO: add the sphere of skills -->
-			</canvas>
+
 		</div>w
 	</div>
 	<span class="tags bottom-tags"> &nbsp;&nbsp;&nbsp;&lt;/body&gt;
@@ -28,3 +26,18 @@
 	</span>
 </div>
 </template>
+
+<script>
+// import {TagCanvas} from '../external/tagcanvas29';
+
+export default {
+
+	created(){
+		// console.log(Object.getOwnPropertyNames(TagCanvas));
+		// console.log(TagCanvas.Start);
+		// TagCanvas.Start('#myCanvas');
+
+	}
+};
+
+</script>

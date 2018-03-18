@@ -19,14 +19,13 @@
 			<p><strong> Things I like: </strong><br/>pianos and guitars, soccer, tennis, good hikes, money, Paint Nite
 			</p>
 			<p> <strong> Things I do not like: </strong><br/> bad hikes, politics, lack of ice-cream, most of TV
-				<p>
-				</p>
-				<p>&nbsp;
-				</p>
-				<div class="clear">
-				</div>
+			</p>
+			<p>&nbsp;
+			</p>
+			<div class="clear">
 			</div>
-			<div class="sound-cloud card">
+		</div>
+		<div class="sound-cloud card">
 			<app-slideshow :slideshow="slideshowData"></app-slideshow>
 		</div>
 		<span class="tags bottom-tags"> &nbsp;&nbsp;&nbsp;&lt;/body&gt;
