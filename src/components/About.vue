@@ -14,7 +14,7 @@
 			<p>
 				<strong>Why you should hire me:</strong>
 			</p>
-			<p>I'm funny! Also, I work hard and love learning. The gaps in my knowledge get smaler everyday because I read everyday.  I am self-taught so you know I have initiative, and since I don't do my learning for the sake a grade, I do not cram and my knowledge is deep.  I only have a few years of experience but a look at the number of projects on my github will show you that I have a lot of result to show for those years.
+			<p>I'm funny! Also, I work hard and love learning. The gaps in my knowledge get smaler everyday because I read everyday.  I am self-taught so you know I have initiative, and since I don't do my learning for the sake of a grade, I do not cram and my knowledge is deep.  I only have a few years of experience but a look at the number of projects on my github will show you that I have a lot of results to show over the years.
 			</p>
 			<p><strong> Things I like: </strong><br/>pianos and guitars, soccer, tennis, good hikes, money, Paint Nite
 			</p>
