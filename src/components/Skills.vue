@@ -22,10 +22,13 @@
 	<div class="clear">
 	</div>
 	<div class="skills-charts">
-		<div id="myCanvasContainer">
-			<canvas width="500" height="500" id="myCanvas">
-			<!-- TODO: add the sphere of skills -->
-			</canvas>
+		<div id="myCanvasContainer" style="width:100%; position:relative">
+			<vue-word-cloud :words="Skills" :color="([, weight]) => weight > 10 ? 'DeepPink' : weight > 5 ? 'RoyalBlue' : 'Indigo'"
+  font-family="Roboto" />
+				
+<!-- 			<canvas width="500" height="500" id="myCanvas">
+			<!-- TODO: add the sphere of skills - ->
+			</canvas> -->
 		</div>
 	</div>
 	<span class="tags bottom-tags"> &nbsp;&nbsp;&nbsp;&lt;/body&gt;
@@ -33,3 +36,22 @@
 	</span>
 </div>
 </template>
+
+<script>
+import VueWordCloud from 'vuewordcloud';
+import {Skills} from '../data/Skills';
+export default {
+	data(){
+		return {
+			Skills
+		};
+	},
+	components:{
+		VueWordCloud
+	}
+
+
+}
+
+
+</script>
