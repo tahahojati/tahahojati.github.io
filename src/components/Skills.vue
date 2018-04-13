@@ -17,9 +17,9 @@
 	<div class="clear">
 	</div>
 	<div class="skills-charts">
-		<div id="myCanvasContainer">
+		<div ref="wordcloudDiv" id="wordcloudDiv">
 
-		</div>w
+		</div>
 	</div>
 	<span class="tags bottom-tags"> &nbsp;&nbsp;&nbsp;&lt;/body&gt;
 		<br/> &lt;/html&gt;
@@ -29,15 +29,36 @@
 
 <script>
 // import {TagCanvas} from '../external/tagcanvas29';
+import {WordCloud} from '../external/wordcloud.js'; 
 
 export default {
+	data(){
+		return {
+			wordcloud: null,
+		};
+	},
 
-	created(){
+	mounted(){
 		// console.log(Object.getOwnPropertyNames(TagCanvas));
 		// console.log(TagCanvas.Start);
 		// TagCanvas.Start('#myCanvas');
-
+		// console.log(WordCloud);
+		this.wordcloud = new WordCloud(this.$refs.wordcloudDiv);
+		let words =  "Angular Node Express Python C++"
+            .replace(/[!\.,:;\?]/g, '')
+            .split(' ')
+            .map(function(d) {
+                return {text: d, size: 10 + Math.random() * 60};
+            }); 
+        console.log(words);
+        this.wordcloud.draw(words);
 	}
 };
 
 </script>
+
+<style>
+	.skills-charts {
+		opacity: 1;
+	}
+</style>
