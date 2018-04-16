@@ -5,18 +5,13 @@
 	<div class="text-zone">
 		<h1> Skills &#038; Experience
 		</h1>
-		<p>Main area of my expertise is front end development and everything related with this side of web.   HTML,CSS, JS (ES5,ES6), building small &amp; medium Web Apps, Angular , Vue.js, building custom plugins, features, animations and just coding layouts.
+		<p>I am mostly 
 		</p>
-		<p>Often I work as a full-stack develeoper  &#8211; mainly in Lamp environment, PHP and open source CMS&#8217;s like (WordPress, Drupal, Magento, Typo 3 etc..) .
+		<p>
 		</p>
-		<p>I have also some experience with Node.js,  Mongo DB (Keystone.JS).
+		<p>
 		</p>
-		<p>Would like to know more?
-			<br /> Please check my
-			<a href="https://www.linkedin.com/in/jacek-jeznach-0a99b640" target="_blank">LinkedIn
-			</a> profile or just
-			<a href="/contact">contact
-			</a> me.
+		<p>
 		</p>
 	</div>
 	<div class="clear">
@@ -25,11 +20,14 @@
 		<div id="myCanvasContainer" style="width:100%; position:relative">
 			<vue-word-cloud :words="Skills" :color="([, weight]) => weight > 10 ? 'DeepPink' : weight > 5 ? 'RoyalBlue' : 'Indigo'"
   font-family="Roboto" />
+  		</div>
 				
 <!-- 			<canvas width="500" height="500" id="myCanvas">
 			<!-- TODO: add the sphere of skills - ->
 			</canvas> -->
-		</div>
+	<!-- 	<div ref="wordcloudDiv" id="wordcloudDiv">
+
+		</div> -->
 	</div>
 	<span class="tags bottom-tags"> &nbsp;&nbsp;&nbsp;&lt;/body&gt;
 		<br/> &lt;/html&gt;
@@ -52,6 +50,37 @@ export default {
 
 
 }
+// import {TagCanvas} from '../external/tagcanvas29';
+// import {WordCloud} from '../external/wordcloud.js'; 
 
+// export default {
+// 	data(){
+// 		return {
+// 			wordcloud: null,
+// 		};
+// 	},
+
+// 	mounted(){
+// 		// console.log(Object.getOwnPropertyNames(TagCanvas));
+// 		// console.log(TagCanvas.Start);
+// 		// TagCanvas.Start('#myCanvas');
+// 		// console.log(WordCloud);
+// 		this.wordcloud = new WordCloud(this.$refs.wordcloudDiv);
+// 		let words =  "Angular Node Express Python C++"
+//             .replace(/[!\.,:;\?]/g, '')
+//             .split(' ')
+//             .map(function(d) {
+//                 return {text: d, size: 10 + Math.random() * 60};
+//             }); 
+//         console.log(words);
+//         this.wordcloud.draw(words);
+// 	}
+// }; -->
 
 </script>
+
+<style>
+	.skills-charts {
+		opacity: 1;
+	}
+</style>

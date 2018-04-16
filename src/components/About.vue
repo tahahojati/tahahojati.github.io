@@ -14,19 +14,18 @@
 			<p>
 				<strong>Why you should hire me:</strong>
 			</p>
-			<p>I'm funny! Also, I work hard and love learning. The gaps in my knowledge get smaler everyday because I read everyday.  I am self-taught so you know I have initiative, and since I don't do my learning for the sake of a grade, I do not cram and my knowledge is deep.  I only have a few years of experience but a look at the number of projects on my github will show you that I have a lot of results to show over the years.
+			<p>I'm funny! Also, I work hard and love learning. The gaps in my knowledge get smaller everyday because I read everyday.  I am self-taught so you know I have initiative, and since I don't do my learning for the sake of a grade, I do not cram and my knowledge is deep.  I only have a few years of experience but a look at the number of projects on my github will show you that I have a lot of results to show over the years.
 			</p>
 			<p><strong> Things I like: </strong><br/>pianos and guitars, soccer, tennis, good hikes, money, Paint Nite
 			</p>
 			<p> <strong> Things I do not like: </strong><br/> bad hikes, politics, lack of ice-cream, most of TV
-				<p>
-				</p>
-				<p>&nbsp;
-				</p>
-				<div class="clear">
-				</div>
+			</p>
+			<p>&nbsp;
+			</p>
+			<div class="clear">
 			</div>
-			<div class="sound-cloud card">
+		</div>
+		<div class="sound-cloud card">
 			<app-slideshow :slideshow="slideshowData"></app-slideshow>
 		</div>
 		<span class="tags bottom-tags"> &nbsp;&nbsp;&nbsp;&lt;/body&gt;
