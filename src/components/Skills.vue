@@ -17,7 +17,7 @@
 	<div class="clear">
 	</div>
 	<div class="skills-charts">
-		<div id="myCanvasContainer" style="width:100%; position:relative">
+		<div id="myCanvasContainer" style="position:relative">
 			<vue-word-cloud :words="wordsObject" :load-font="loadFont" :font-family="font"/>
   		</div>
 				
@@ -140,5 +140,7 @@ export default {
 <style>
 	.skills-charts {
 		opacity: 1;
+		width: 65%;
+		right:10px;
 	}
 </style>
