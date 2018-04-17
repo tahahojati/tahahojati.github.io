@@ -5,11 +5,9 @@
 	<div class="text-zone">
 		<h1> Skills &#038; Experience
 		</h1>
-		<p>I am mostly 
+		<p> I believe that my most important skill is my ability to learn new topics quickly. Rarely does a month go by without me having learned a completely new skill.  Recently, I have focused on learning Android, Vue.js, Google Cloud, AVR programming, and 3D printing.  I also beleive that I am good at modular software design and system design.  These are skills that I have practiced through designing several personal Android apps and Websites.  My other area of strengh is my analytical skills.  I am good at math and anything that relates to it, including graphs and algorithms, statistics, number theory, electronics, physics etc. I am not an expert in those subjects but I can undestand a research paper. 
 		</p>
-		<p>
-		</p>
-		<p>
+		<p> When it comes to web and app design, I am purely a developer.  I am familiar with current technologies and given a solid functional description of an application, I a confident that I can develop it. That said, I am pretty bad at designing products. In fact all of the design for this portfolio is "inspired" by work of others (though I programed it from scratch). In short, if you want your app -- that you hired me to write for you -- to look both pretty and original, you should also hire a designer because I can only do one of those :). 
 		</p>
 		<p>
 		</p>
@@ -96,7 +94,7 @@ export default {
 	created: function(){
 		const self = this; 
 		const foo = () => {
-			console.log('foo');
+			//console.log('foo');
 			self.randomizeAndRecompute();
 			self.timeout = setTimeout(foo, 10000); 
 		};
