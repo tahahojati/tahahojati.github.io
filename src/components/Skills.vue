@@ -18,8 +18,7 @@
 	</div>
 	<div class="skills-charts">
 		<div id="myCanvasContainer" style="width:100%; position:relative">
-			<vue-word-cloud :words="Skills" :color="([, weight]) => weight > 10 ? 'DeepPink' : weight > 5 ? 'RoyalBlue' : 'Indigo'"
-  font-family="Roboto" />
+			<vue-word-cloud :words="wordsObject" :load-font="loadFont" :font-family="font"/>
   		</div>
 				
 <!-- 			<canvas width="500" height="500" id="myCanvas">
@@ -37,16 +36,75 @@
 
 <script>
 import VueWordCloud from 'vuewordcloud';
-import {Skills} from '../data/Skills';
+import FontFaceObserver from 'fontfaceobserver';
+import {Skills, pickRandomColor, pickRandomColorScheme, pickRandomFont, pickRandomRotation} from '../data/Skills';
 export default {
 	data(){
 		return {
-			Skills
+			Skills,
+			font:'Abril Fatface',
+			colors:[],
+			colorScheme: 0,
+			rotations: [],
+			timeout: null,
 		};
 	},
 	components:{
 		VueWordCloud
-	}
+	},
+	computed: {
+		wordsObject: function(){
+			const mySkills = this.Skills;
+			const myColors = this.colors; 
+			const myRotations = this.rotations; 
+			
+			let res = [];
+			for(let i =0 ; i< mySkills.length; ++i){
+				const word = mySkills[i]; 
+				res.push({
+					text: word.text,
+					weight: word.weight,
+					rotation: myRotations[i],
+					color: myColors[i],
+				});
+			}
+			return res;
+		}, 
+	},
+	methods: {
+		loadFont: function(fontFamily, fontStyle, fontWeight, text) {
+			// console.log(fontFamily, fontStyle, fontWeight, text);
+			// return (new FontFaceObserver(fontFamily, {
+			// 	style: fontStyle,
+			// 	weight: fontWeight,
+			// })).load(text).then(function(){console.log("font loaded")}, function(err){console.log('error', err);});
+		},
+		randomizeAndRecompute: function(){
+			const count = this.Skills.length; 
+			this.font = pickRandomFont(); 
+			this.colorScheme = pickRandomColorScheme();
+			let colors = [];
+			let rotations = [];
+			for(let i = 0; i < this.Skills.length; ++i){
+				colors.push(pickRandomColor(this.colorScheme));
+				rotations.push(pickRandomRotation());
+			}
+			this.rotations = rotations;
+			this.colors = colors; 
+		}
+	},
+	created: function(){
+		const self = this; 
+		const foo = () => {
+			console.log('foo');
+			self.randomizeAndRecompute();
+			self.timeout = setTimeout(foo, 10000); 
+		};
+		foo(); 
+	},
+	beforeDestroy(){
+		clearTimeout(this.timeout);
+	},
 
 
 }
