@@ -138,7 +138,7 @@ export default {
 <style>
 	.skills-charts {
 		opacity: 1;
-		width: 65%;
+		width: 55%;
 		right:10px;
 	}
 </style>
