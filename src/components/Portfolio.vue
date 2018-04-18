@@ -1,5 +1,15 @@
 <template>
 <div class="container portfolio" style="opacity:1">	
-	The Portfolio component
+	<project-modal> </project-modal>
 </div>
 </template>
+
+<script>
+import ProjectModal from './ProjectModal.vue';
+
+export default {
+	components: {
+		ProjectModal,
+	}
+};	
+</script>

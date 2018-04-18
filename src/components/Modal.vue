@@ -9,7 +9,7 @@
               default header
             </slot>
           </div> -->
-
+          <!--TODO: add a close button and emit changeVisibility event with false value. -->
           <div class="modal-body">
             <slot name="body">
               default body
@@ -25,16 +25,20 @@
 <script>
 
 export default {
+	model:{
+		prop: 'showModal',
+		event: 'changeVisibility',
+	},
 	data(){
 		return {
 		};
 	},
-	props: [
+	props: {
 		showModal: {
 			type: Boolean,
 			default: false,
 		}
-	],
+	},
 };
 	
 </script>
