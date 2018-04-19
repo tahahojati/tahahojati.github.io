@@ -1,7 +1,9 @@
 <template>
 	<modal v-model="showModal">
 		<template slot="body">
-			<tiny-slider  :mouse-drag="true" :loop="false" items="1" gutter="20" edgePadding="30">
+			<tiny-slider  :mouse-drag="true" :loop="false"
+			 items="1" :gutter="20" :edgePadding="50" controlsContainer="#slider-controls"
+			 :nav="true">
 				<div>Slider item #1</div>
 				<div>Slider item #2</div>
 				<div>Slider item #3</div>
@@ -9,6 +11,10 @@
 				<div>Slider item #5</div>
 				<div>Slider item #6</div>
 			</tiny-slider>
+				<ul id="slider-controls">
+					<li class="prev" data-controls="prev"><img src="../assets/angle-left.png" alt=""/></li>
+					<li class="next" data-controls="next"><img src="../assets/angle-right.png" alt=""/></li>
+				</ul>
 		</template>
 		
 	</modal>
@@ -63,7 +69,48 @@ export default {
 	}
 };
 </script>
-<style src="tiny-slider/dist/tiny-slider.css">
+<style src="tiny-slider/dist/tiny-slider.css" scoped>
+</style>
+<style scoped>
+#slider-controls li {
+	display: block;
+    position: absolute;
+    list-style: none;
+    top: 50%;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin:0;
+    margin-top: -30px;
+}
+
+#slider-controls li:hover {
+    background: #f2f2f2;
+}
+#slider-controls .prev {
+    left: 0;
+}
+#slider-controls .next {
+    right: 0;
+} 	
+#slider-controls{
+	vertical-align: middle;
+	padding:0;
+	margin: 0 -25px 0 -25px ;
+	position: relative;
+}
+</style>
+<style>
+.tns-outer.tns-ovh{
+	text-align: center;
+}
+.tns-outer.tns-ovh.tnsnav{
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
 </style>
 <!-- <style lang="scss">
 @import 'tiny-slider/src/tiny-slider';
