@@ -16,6 +16,7 @@
     "d3-cloud": "^1.2.5",
     "font-awesome": "^4.7.0",
     "fontfaceobserver": "^2.0.13",
+    "tiny-slider": "^2.6.0",
     "vue": "^2.5.11",
     "vue-router": "^3.0.1",
     "vue-tiny-slider": "^0.1.16",

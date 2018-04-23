@@ -69,7 +69,9 @@ export default {
 	}
 };
 </script>
-<style src="tiny-slider/dist/tiny-slider.css" scoped>
+<style src="tiny-slider/dist/tiny-slider.css" >
+</style>
+<style src="../styles/tiny-slider-extra.css" >
 </style>
 <style scoped>
 #slider-controls li {
