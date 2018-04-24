@@ -3,20 +3,17 @@
     <div class="modal-mask" v-if="showModal">
       <div class="modal-wrapper">
         <div class="modal-container">
-
-    <!--       <div class="modal-header">
-            <slot name="header">
-              default header
-            </slot>
-          </div> -->
-          <!--TODO: add a close button and emit changeVisibility event with false value. -->
+          <button type="button" class="close" @click="$emit('changeVisibility', false)"></button>
+          <div class="modal-header">
+            <slot name="header"></slot>
+          </div>
           <div class="modal-body">
             <slot name="body">
               default body
             </slot>
           </div>
-
           <div class="modal-footer"><slot name="footer"></slot></div>
+          <slot name="container"></slot>
         </div>
       </div>
     </div>
@@ -43,9 +40,28 @@ export default {
 	
 </script>
 <style scoped>
+button.close{
+    float: right;
+    margin-top: -15px;
+    margin-right: -15px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 80px;
+    background: #605F61;
+    font-size: 21px;
+    font-weight: bold;
+    display: inline-block;
+    /*line-height: 0px;*/
+    padding: 0px 8px;
+}
+button.close::after{
+  content: "x";
+}
+
 .modal-mask {
   position: fixed;
-  z-index: 9998;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
@@ -61,14 +77,20 @@ export default {
 }
 
 .modal-container {
-  width: 300px;
+  width: 80%;
   margin: 0px auto;
-  padding: 20px 30px;
+  /*padding: 20px 45px;*/
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+@media screen and (min-width:1100px){
+  .modal-container{
+    width:950px;
+  }
 }
 
 .modal-header h3 {
@@ -77,7 +99,7 @@ export default {
 }
 
 .modal-body {
-  margin: 20px 0;
+  margin: 40px 45px;
 }
 
 .modal-default-button {
