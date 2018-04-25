@@ -19,8 +19,13 @@ const farmsafe = {
 			+ "<p>The app is meant to address an essential issue in the Hawaii Farms.  Every year, a population of farmers and laborers immigrate to Hawaii.  These individuals frequently do not speak English and are not familiar to the American standards of farming.  Currently, there is no affordable way to educate these farmers.  Moreover, department of Agriculture does not have a dependable way to assure that a new farmer is familiar with regulations.  This can lead to food safety issues due to inadequate adherence to safety standards among other issues. </p>"
 			+"<p>We chose to develop an application that can teach farmers about Agricultural methods and standards in a variety of languages. We chose the mobile platform over web/desktop as we understood that the app must be available to farmers in the field without any network connection.  Moreover, we wanted a simple design that is mostly self explanatory.  The pictures below show our prototype created using proto.io</p>",
 			objectHtml: '<img src="../assets/farmsafe_proto1.png" class="img-responsive"/> ',
-			objectAddress: requireImages('./farmsafe_proto1.png'), 
+			objectData: [
+				requireImages('./farmsafe_proto1.png'), 
+				requireImages('./farmsafe_proto2.png'), 
+				requireImages('./farmsafe_proto3.png'), 
+			],
 			layoutComponent: 'ModalViewImgLeft',
+			objectComponent: 'ModalViewImgImgSlideshow',
 		},
 	]		
 	
