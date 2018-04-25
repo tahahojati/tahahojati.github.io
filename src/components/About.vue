@@ -1,6 +1,6 @@
 <template>
 <div>
-	<div class="container about" style="opacity:1">
+	<div class="my-container container-fluid about" style="opacity:1">
 		<span class="tags top-tags"> &nbsp;&nbsp;&nbsp;&lt;body&gt;
 		</span>
 		<div class="text-zone">

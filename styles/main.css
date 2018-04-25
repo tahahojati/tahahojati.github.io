@@ -337,7 +337,7 @@ body {
 }
 
 
-.container {
+.my-container {
     width: 100%;
     will-change: contents;
     height: 90%;
@@ -352,7 +352,7 @@ body {
     transform-style: preserve-3d;
 }
 
-.container.magicwall {
+.my-container.magicwall {
     height: 100%;
     top:0;
 }
@@ -665,7 +665,7 @@ body {
 
 /*================================================== ABOUT ============================================== */
 
-.container.about .text-zone{
+.my-container.about .text-zone{
     position: absolute;
     left:10%;
     top: 50%;
@@ -678,7 +678,7 @@ body {
     max-height: 90%;
 
 }
-.container.about .text-zone h1 {
+.my-container.about .text-zone h1 {
     font-size: 53px;
     font-family: font-file-82132;
     color:#00E5FF;
@@ -688,14 +688,14 @@ body {
     margin-bottom: 40px;
 }
 
-.container.about h1 .blast {
+.my-container.about h1 .blast {
     will-change: transform;
     opacity: 0;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
-.container.about .text-zone h1:before {
+.my-container.about .text-zone h1:before {
     content: '<h1>';
     font-family: 'La Belle Aurore', cursive;
     color: #90CAF9;
@@ -703,7 +703,7 @@ body {
     position: absolute;
     margin-top: -10px;
 }
-.container.about .text-zone h1:after {
+.my-container.about .text-zone h1:after {
     content: '<h1/>';
     font-family: 'La Belle Aurore', cursive;
     color: #90CAF9;
@@ -715,7 +715,7 @@ body {
 
 }
 
-.container.about .text-zone p {
+.my-container.about .text-zone p {
     font-size: 13px;
     line-height: 18px;
     color: #ffffff;
@@ -824,7 +824,7 @@ body {
 /*================================================== CONTACT ============================================== */
 
 
-.container.contact .text-zone{
+.my-container.contact .text-zone{
     position: absolute;
     left:10%;
     top: 50%;
@@ -837,7 +837,7 @@ body {
     max-height: 90%;
 
 }
-.container.contact .text-zone h1 {
+.my-container.contact .text-zone h1 {
     font-size: 53px;
     font-family: font-file-82132;
     color:#FF80AB;
@@ -847,14 +847,14 @@ body {
     margin-bottom: 40px;
 }
 
-.container.contact .blast {
+.my-container.contact .blast {
     will-change: transform;
     opacity: 0;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
-.container.contact .text-zone h1:before {
+.my-container.contact .text-zone h1:before {
     content: '<h1>';
     font-family: 'La Belle Aurore', cursive;
     color: #90CAF9;
@@ -862,7 +862,7 @@ body {
     position: absolute;
     margin-top: -10px;
 }
-.container.contact .text-zone h1:after {
+.my-container.contact .text-zone h1:after {
     content: '<h1/>';
     font-family: 'La Belle Aurore', cursive;
     color: #90CAF9;
@@ -874,7 +874,7 @@ body {
 
 }
 
-.container.contact .text-zone p {
+.my-container.contact .text-zone p {
     font-size: 13px;
     line-height: 18px;
     color: #ffffff;
@@ -1047,7 +1047,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 }
 /*================================================== SKILLS ============================================== */
 
-.container.skills .text-zone{
+.my-container.skills .text-zone{
     position: absolute;
     left:10%;
     top: 50%;
@@ -1060,7 +1060,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     max-height: 90%;
 
 }
-.container.skills .text-zone h1 {
+.my-container.skills .text-zone h1 {
     font-size: 53px;
     font-family: font-file-82132;
     color:#00E5FF;
@@ -1074,14 +1074,14 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
 
 
-.container.skills h1 .blast {
+.my-container.skills h1 .blast {
     will-change: transform;
     opacity: 0;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
 }
 
-.container.skills .text-zone h1:before {
+.my-container.skills .text-zone h1:before {
     content: '<h1>';
     font-family: 'La Belle Aurore', cursive;
     color: #90CAF9;
@@ -1089,7 +1089,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     position: absolute;
     margin-top: -35px;
 }
-.container.skills .text-zone h1:after {
+.my-container.skills .text-zone h1:after {
     content: '<h1/>';
     font-family: 'La Belle Aurore', cursive;
     color: #90CAF9;
@@ -1671,14 +1671,14 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
         font-size: 16px !important;
         line-height: 21px !important;
     }
-    .container.contact .text-zone h1:before,
-    .container.skills .text-zone h1:before,
-    .container.about .text-zone h1:before {
+    .my-container.contact .text-zone h1:before,
+    .my-container.skills .text-zone h1:before,
+    .my-container.about .text-zone h1:before {
         margin-top: -38px;
     }
-    .container.contact .text-zone h1:after,
-    .container.skills .text-zone h1:after,
-    .container.about .text-zone h1:after {
+    .my-container.contact .text-zone h1:after,
+    .my-container.skills .text-zone h1:after,
+    .my-container.about .text-zone h1:after {
         bottom: -44px;
     }
 
@@ -1696,7 +1696,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 @media (min-width: 960px) and (max-height: 800px ){
 
 
- .container.about .text-zone img{
+ .my-container.about .text-zone img{
      display: none;
  }
 
@@ -1705,7 +1705,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
 @media (max-width: 1024px){
 
-    .container.contact .text-zone{width: 36%;}
+    .my-container.contact .text-zone{width: 36%;}
     .inf-map {
         top: -10px;
         right: 25%;
@@ -1714,21 +1714,21 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
         font-size: 54px !important;
         line-height: 45px;
     }
-    .container.about .text-zone {
+    .my-container.about .text-zone {
         width: 40%;
     }
 
     .text-page .text-zone h1:after,
-    .container.about .text-zone h1:after,
-    .container.contact .text-zone h1:after {
+    .my-container.about .text-zone h1:after,
+    .my-container.contact .text-zone h1:after {
 
         bottom: -40px;
 
     }
 
     .text-page .text-zone h1:before,
-    .container.about .text-zone h1:before,
-    .container.contact .text-zone h1:before {
+    .my-container.about .text-zone h1:before,
+    .my-container.contact .text-zone h1:before {
 
         margin-top: -29px;
     }
@@ -1894,7 +1894,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     }
 
 
-    .container {
+    .my-container {
         width: 100%;
         height: auto;
         padding-bottom: 58px;
@@ -1910,7 +1910,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
        opacity: 0.5;
     }
 
-    .container.gallery {
+    .my-container.gallery {
         position: absolute;
         min-height: 1200px;
     }
@@ -1942,8 +1942,8 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
         transform: none !important;
         margin-top: 170px;
     }
-    .container.about  .text-zone,
-    .container.skills .text-zone{
+    .my-container.about  .text-zone,
+    .my-container.skills .text-zone{
         width: 80%;
         min-height: 0;
 	
@@ -1980,7 +1980,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
         display:none
     }
 
-    .container.contact .text-zone {
+    .my-container.contact .text-zone {
         width: 80%;
     }
 

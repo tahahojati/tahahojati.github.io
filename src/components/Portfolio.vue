@@ -1,5 +1,5 @@
 <template>
-<div class="container portfolio" style="opacity:1">	
+<div class="my-container container-fluid portfolio" style="opacity:1">	
 	<project-modal> </project-modal>
 </div>
 </template>

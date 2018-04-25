@@ -1,9 +1,9 @@
 <template>
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col-xs-5">
 			<img class="img-responsive top-modal-slide-img" :src="src"/>
 		</div>
-		<div class="col-xs-12" v-html="slide.textHtml">
+		<div class="col-xs-7" v-html="slide.textHtml">
 
 		</div>
 	</div>
@@ -26,7 +26,6 @@ export default {
 	}
 }
 </script>
-
 <style>
 .top-modal-slide-img {
 	max-height: 50vh;

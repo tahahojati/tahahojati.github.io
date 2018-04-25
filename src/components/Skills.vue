@@ -1,5 +1,5 @@
 <template>
-<div class="container skills" style="opacity:1">
+<div class="my-container container-fluid skills" style="opacity:1">
 	<span class="tags top-tags"> &nbsp;&nbsp;&nbsp;&lt;body&gt;
 	</span>
 	<div class="text-zone">
