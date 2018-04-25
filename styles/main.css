@@ -840,7 +840,7 @@ body {
 .my-container.contact .text-zone h1 {
     font-size: 53px;
     font-family: font-file-82132;
-    color:#FF80AB;
+    color:#00E5FF;
     font-weight: normal;
     margin-top: 0;
     position: relative;
@@ -894,7 +894,7 @@ body {
     margin: 0;
     list-style: none;
     margin-bottom: 10px;
-    opacity: 0;
+    /*opacity: 0;*/
     overflow: hidden;
     display: block;
     clear: both;
@@ -915,7 +915,7 @@ body {
 .contact-form input[type="text"],.contact-form input[type="email"]{
     width: 100%;
     border: 0;
-    background:#37393b ;
+    background:#64B5F6 ;
     height: 50px;
     font-size: 16px;
     color: #E3F2FD;
@@ -926,7 +926,7 @@ body {
 .contact-form textarea {
     width: 100%;
     border: 0;
-    background:#37393b ;
+    background:#64B5F6 ;
     height: 50px;
     font-size: 16px;
     color: #E3F2FD;
@@ -934,14 +934,19 @@ body {
     box-sizing: border-box;
     min-height: 150px;
 }
+
+.contact-form textarea::placeholder, .contact-form input::placeholder {
+    color: #E3F2FD;
+}
+
 .contact-form  .flat-button {
-    color:#FF80AB;
+    color:#00E5FF;
     font-size: 11px;
     letter-spacing: 3px;
     font-family: "Open Sans", sans-serif;
     text-decoration: none;
     padding: 8px 10px;
-    border: 1px solid #FF80AB;
+    border: 1px solid #00E5FF;
     float: left;
     border-radius: 4px;
     background: transparent;
@@ -952,7 +957,7 @@ body {
 
 }
 .contact-form .flat-button:hover {
-    background: #FF80AB;
+    background: #00E5FF;
     color:#2196F3;
 
 }
@@ -1043,7 +1048,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     font-size: 16px;
 }
 .inf-map span span {
-    color:#FF80AB;
+    color:#00E5FF;
 }
 /*================================================== SKILLS ============================================== */
 
