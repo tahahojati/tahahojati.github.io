@@ -40,17 +40,16 @@
 			</div>
 		</transition>
 	</div>
-	<div class="inf-map"> Jacek Jeznach,
-		<br/> Poland,ul. Bartosza Głowackiego 28 lok. 22, 20-060 Lublin
-		<br/>
-		<br/>
-		<span>
-			<span>@
-			</span>: &#106;&#101;&#122;&#110;&#097;&#099;&#107;&#105;&#049;&#051;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;
-		</span>
-	</div>
-	<div class="map-wrap">
-		<div id="map">
+
+	<div class="map-wrap">	
+		<div class="inf-map"> Taha Pourjalali,
+			<br/> Honolulu, HI 
+			<br/> USA
+			<br/>
+			<span>
+				<span>@
+				</span>: tpourjalali@gmail.com
+			</span>
 		</div>
 	</div>
 	<span class="tags bottom-tags"> &nbsp;&nbsp;&nbsp;&lt;/body&gt;
@@ -59,7 +58,7 @@
 </div>
 </template>
 
-<style>
+<style scoped>
 .contact-form{
 	opacity: 0.9; 
 }
@@ -69,4 +68,36 @@
 .fade-enter-active{
 	transition: opacity 3s ease;
 }
+.map-wrap{
+	position: relative;
+	/*margin:-40px -10px 5px 25px;*/
+	background: #AADAFF url('../assets/contact-map.png') center center no-repeat;
+	box-shadow: 0 0 20px 5px;
+}
+
+.inf-map {
+    position: absolute;
+    background: #000000;
+    top:20px;
+    left:20px; 
+    z-index: 999999;
+    width: 230px;
+    padding: 20px;
+    color:#fff;
+    font-family: "Open Sans", "Helvetica", Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    /*opacity: 0;*/
+}
+.inf-map span {
+    font-size: 16px;
+}
+.inf-map span span {
+    color:#00E5FF;
+}
+@media screen and (min-width: 900px){
+	.map-wrap{
+		height: 98.5vh;
+	}
+} 
 </style>
