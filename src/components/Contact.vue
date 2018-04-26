@@ -41,16 +41,18 @@
 		</transition>
 	</div>
 
-	<div class="map-wrap">	
-		<div class="inf-map"> Taha Pourjalali,
-			<br/> Honolulu, HI 
-			<br/> USA
-			<br/>
-			<span>
-				<span>@
-				</span>: tpourjalali@gmail.com
-			</span>
-		</div>
+	<div class="map-wrap">
+		<transition name="slide-up" appear>	
+			<div class="inf-map"> Taha Pourjalali,
+				<br/> Honolulu, HI 
+				<br/> USA
+				<br/>
+				<span>
+					<span>@
+					</span>: tpourjalali@gmail.com
+				</span>
+			</div>
+		</transition>
 	</div>
 	<span class="tags bottom-tags"> &nbsp;&nbsp;&nbsp;&lt;/body&gt;
 		<br/> &lt;/html&gt;
@@ -68,6 +70,16 @@
 .fade-enter-active{
 	transition: opacity 3s ease;
 }
+
+.slide-up-enter{
+	opacity: 0;
+	transform: translateY(300px);
+
+}
+.slide-up-enter-active{
+	transition: transform 1s linear, opacity 1.5s ease-in;
+}
+
 .map-wrap{
 	position: relative;
 	/*margin:-40px -10px 5px 25px;*/
@@ -76,12 +88,13 @@
 }
 
 .inf-map {
+	border-radius: 10px;
     position: absolute;
     background: #000000;
     top:20px;
     left:20px; 
     z-index: 999999;
-    width: 230px;
+    width: 250px;
     padding: 20px;
     color:#fff;
     font-family: "Open Sans", "Helvetica", Arial, sans-serif;
