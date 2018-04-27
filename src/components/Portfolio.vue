@@ -46,6 +46,7 @@ export default {
 
 <style scoped>
 	.card {
+		cursor: pointer;
 		display: inline-block;
 		box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
 		margin: 20px;

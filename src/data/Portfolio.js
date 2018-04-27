@@ -3,8 +3,48 @@
 const requireImages = require.context('../assets/projects/', true);
 //console.log(pp);
 
+
+class Project {
+	constructor(
+		{
+			id=null, 
+			title=null,
+			subtitle=null,
+			cardTitle=null,
+			importance=1,
+			sorting=1,
+			tags = null,
+			techs=[],
+			cardBackgroundColor='tranparent',
+			decoration=null,
+			cardImage = '',
+			cardText = '',
+			slides = [],
+			github = null, 
+			live = null, 
+			cardSubtitle = null,
+		} = {}){
+		this.id = id;
+		this.title = title;
+		this.cardTitle = cardTitle || title;
+		this.importance = importance;
+		this.sorting = sorting;
+		this.tags = tags||techs;
+		this.techs = techs;
+		this.cardBackgroundColor = cardBackgroundColor;
+		this.decoration = decoration;
+		this.cardImage = cardImage;
+		this.cardText = cardText;
+		this.slides = slides;
+		this.github = github;
+		this.live = live;
+		this.cardSubtitle = cardSubtitle || subtitle;
+	};
+};
+new Project();
+
 function projectGenerator(id, name){
-	return {
+	return new Project({
 		id: id,
 		title: name,
 		subtitle: '(Second place winner of Hawaii Agricultural Hackathon (Agathon, Feb 2018))',
@@ -29,7 +69,7 @@ function projectGenerator(id, name){
 			},
 		]		
 		
-	};
+	});
 
 }
 
