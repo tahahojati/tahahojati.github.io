@@ -168,8 +168,8 @@ body {
 }
 
 #page {
- 
-    width: 100%;
+    width: calc(100% - 60px);
+    margin-left:60px;
     height: 100%;
     position: absolute;
 }
@@ -325,7 +325,7 @@ body {
     color: #90CAF9;
     position: absolute;
     bottom: 0px;
-    left: 80px;
+    left: 20px;
     font-size: 18px;
     font-family: 'La Belle Aurore', cursive;
 

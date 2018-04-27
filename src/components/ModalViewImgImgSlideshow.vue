@@ -1,6 +1,6 @@
 <template>
-	<tiny-slider  :mouse-drag="true" :loop="true" :speed="400" :controls="false" autoplay="true" 
-	 autoplayHoverPause="true" :autoplayTimeout="autoPlayTimeout"
+	<tiny-slider  :mouse-drag="true" :loop="true" :speed="400" :controls="false" :autoplay="true" 
+	 :autoplayHoverPause="true" :autoplayTimeout="autoPlayTimeout"
 	 mode="gallery"
 	 :autoplayButtonOutput="false"
 	 items="1" :gutter="0" 

@@ -1,23 +1,25 @@
 <template>
-  <transition name="modal">
-    <div class="modal-mask" v-if="showModal">
-      <div class="modal-wrapper">
-        <div class="modal-container">
-          <button type="button" class="close" @click="$emit('changeVisibility', false)"></button>
-          <div class="modal-header">
-            <slot name="header"></slot>
+  <div v-if="showModal">
+    <transition name="modal">
+      <div class="modal-mask" v-show="shown">
+        <div class="modal-wrapper">
+          <div class="modal-container">
+            <button type="button" class="close" @click="hide()"></button>
+            <div class="modal-header">
+              <slot name="header"></slot>
+            </div>
+            <div class="modal-body">
+              <slot name="body">
+                default body
+              </slot>
+            </div>
+            <div class="modal-footer"><slot name="footer"></slot></div>
+            <slot name="container"></slot>
           </div>
-          <div class="modal-body">
-            <slot name="body">
-              default body
-            </slot>
-          </div>
-          <div class="modal-footer"><slot name="footer"></slot></div>
-          <slot name="container"></slot>
         </div>
       </div>
-    </div>
-  </transition>
+    </transition>
+  </div>
 </template>
 <script>
 
@@ -28,6 +30,7 @@ export default {
 	},
 	data(){
 		return {
+      shown: false, 
 		};
 	},
 	props: {
@@ -36,6 +39,19 @@ export default {
 			default: false,
 		}
 	},
+  methods:{
+    hide(){
+      this.shown = false; 
+      window.setTimeout(()=>this.$emit('changeVisibility', false),  550);
+    }
+  },
+  // mounted(){
+  //   this.shown = true;
+  // },
+  updated(){
+    if(this.showModal)
+      window.setTimeout(() => this.shown = true, 10); 
+  },
 };
 	
 </script>
@@ -68,9 +84,11 @@ button.close::after{
   height: 100%;
   background-color: rgba(0, 0, 0, .5);
   display: table;
-  transition: opacity .3s ease;
+  transition: opacity 0.5s ease;
 }
-
+/*.modal-leave-to, .modal-enter {
+  display: none;
+}*/
 .modal-wrapper {
   display: table-cell;
   vertical-align: middle;
@@ -83,7 +101,7 @@ button.close::after{
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-  transition: all .3s ease;
+  transition: all 0.5s ease;
   font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -122,6 +140,7 @@ button.close::after{
 .modal-leave-active {
   opacity: 0;
 }
+
 
 .modal-enter .modal-container,
 .modal-leave-active .modal-container {

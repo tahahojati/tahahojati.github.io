@@ -1,5 +1,5 @@
 <template>
-	<modal v-model="showModal">
+	<modal v-if="project != null" :showModal="showModal" @changeVisibility.capture="$emit('changeVisibility', false)">
 		<template slot="body">
 			<tiny-slider  :mouse-drag="true" :loop="false"
 			 items="1" :gutter="20" :edgePadding="50" controlsContainer="#slider-controls"
@@ -24,15 +24,15 @@ import ModalViewImgTop from './ModalViewImgTop.vue';
 import ModalViewImgLeft from './ModalViewImgLeft.vue';
 // import ModalViewImgWhole from './ModalViewImgWhole.vue';
 import TinySlider from 'vue-tiny-slider';
-import {farmsafe} from '../data/Portfolio'
-
 
 export default {
+	model:{
+		prop: 'showModal',
+		event: 'changeVisibility',
+	},
 	data(){
 		return {
-			//FIXME: set this to false.
-			showModal: true,
-		};
+		}; 
 	},
 	components: {
 		ModalViewImgTop,
@@ -44,9 +44,13 @@ export default {
 	props: {
 		project: {
 			type: Object,
-			default: () => farmsafe,
+		},
+		showModal: {
+			type: Boolean,
+			default: false,
 		}
 	},
+
 	methods:{
 
 	}
