@@ -1,6 +1,6 @@
 <template>
 <div class="my-container container-fluid portfolio" style="opacity:1">	
-	<project-modal v-model="showModal" :project="modalProject"> </project-modal>
+	<project-modal ref="modal" :project="modalProject"> </project-modal>
 	<div class="row">
 		<article v-for="project of projects" class="col-6 col-sm-4 col-lg-3">
 			<div class=" card" @click="openModal(project)">
@@ -30,7 +30,6 @@ export default {
 		return {
 			projects,
 			modalProject: null,
-			showModal: false,
 		};
 	},
 	components: {
@@ -39,7 +38,7 @@ export default {
 	methods: {
 		openModal(project){
 			this.modalProject = project; 
-			this.showModal = true;
+			this.$refs.modal.showModal();
 		}
 	}
 };	

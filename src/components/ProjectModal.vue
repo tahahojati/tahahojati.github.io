@@ -1,7 +1,7 @@
 <template>
-	<modal v-if="project != null" :showModal="showModal" @changeVisibility.capture="$emit('changeVisibility', false)">
+	<modal ref="modal"  @changeVisibility="$emit('changeVisibility', false)">
 		<template slot="body">
-			<tiny-slider  :mouse-drag="true" :loop="false"
+			<tiny-slider v-if="project!=null"  :mouse-drag="true" :loop="false"
 			 items="1" :gutter="20" :edgePadding="50" controlsContainer="#slider-controls"
 			 :nav="true">
 			 	<div v-for="slide in project.slides">
@@ -26,10 +26,6 @@ import ModalViewImgLeft from './ModalViewImgLeft.vue';
 import TinySlider from 'vue-tiny-slider';
 
 export default {
-	model:{
-		prop: 'showModal',
-		event: 'changeVisibility',
-	},
 	data(){
 		return {
 		}; 
@@ -45,14 +41,16 @@ export default {
 		project: {
 			type: Object,
 		},
-		showModal: {
-			type: Boolean,
-			default: false,
-		}
 	},
 
 	methods:{
-
+		showModal(){
+			console.log('inside showModal');
+			this.$refs.modal.show();
+		},
+		hideModal(){
+			//TODO: not implemented
+		},
 	}
 };
 </script>

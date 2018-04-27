@@ -1,10 +1,10 @@
 <template>
-  <div v-if="showModal">
+  <div v-if="exists">
     <transition name="modal">
       <div class="modal-mask" v-show="shown">
         <div class="modal-wrapper">
           <div class="modal-container">
-            <button type="button" class="close" @click="hide()"></button>
+            <button type="button" class="close" @click="hideInternal()"></button>
             <div class="modal-header">
               <slot name="header"></slot>
             </div>
@@ -31,27 +31,34 @@ export default {
 	data(){
 		return {
       shown: false, 
+      exists: false, 
 		};
-	},
-	props: {
-		showModal: {
-			type: Boolean,
-			default: false,
-		}
 	},
   methods:{
     hide(){
+      this.shown = false;
+      window.setTimeout(
+        ()=>{
+          this.exists = false; 
+        },  550);
+
+    },
+    hideInternal(){
       this.shown = false; 
-      window.setTimeout(()=>this.$emit('changeVisibility', false),  550);
+      window.setTimeout(
+        ()=>{
+          this.exists = false; 
+          this.$emit('changeVisibility', false);
+        },  550);
+    },
+    show(){
+      this.exists = true;
+      this.shown = true;
     }
   },
   // mounted(){
   //   this.shown = true;
   // },
-  updated(){
-    if(this.showModal)
-      window.setTimeout(() => this.shown = true, 10); 
-  },
 };
 	
 </script>
@@ -133,7 +140,7 @@ button.close::after{
  * these styles.
  */
 
-.modal-enter {
+.modal-enter, .modal-leave-to {
   opacity: 0;
 }
 
