@@ -5,7 +5,7 @@
 		<article v-for="project of projects" class="col-6 col-sm-4 col-lg-3">
 			<div class=" card" @click="openModal(project)">
 				<div class="image">
-					<img src="http://materializecss.com/images/sample-1.jpg" width="100%">
+					<img src="http://materializecss.com/images/sample-1.jpg">
 					<span class="card-title"> {{project.title}}</span>
 				</div>
 
@@ -63,14 +63,19 @@ export default {
 	.card .image {
 		position: relative;
 		height: 200px;
+		width: 100%;
 		opacity: .7;
 		overflow: hidden;
 		transition: all .2s ease-in-out;
 	}
+	.card .image > img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 
 	.card .image:hover,
 	.card:hover .image {
-		height: 200px;
 		opacity: 1;
 	}
 	.card .image .card-title {
@@ -92,7 +97,7 @@ export default {
 	.text {
 		background: #FFF;
 		padding: 20px;
-		min-height: 200px;
+		height: 150px;
 	}
 
 	.text p {
