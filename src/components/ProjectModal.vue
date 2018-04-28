@@ -1,8 +1,10 @@
 <template>
 	<modal ref="modal"  @changeVisibility="$emit('changeVisibility', false)">
 		<template slot="body">
+			<!-- :edgePadding="50" this was removed from below..-->
 			<tiny-slider v-if="project!=null"  :mouse-drag="true" :loop="false"
-			 items="1" :gutter="20" :edgePadding="50" controlsContainer="#slider-controls"
+			 items="1" :gutter="20"controlsContainer="#slider-controls"
+			 font-size="20px"
 			 :nav="true">
 			 	<div v-for="slide in project.slides">
 			 		<component :is="slide.layoutComponent" :slide="slide"/>
@@ -64,6 +66,7 @@ export default {
     position: absolute;
     list-style: none;
     top: 50%;
+    background: #f2f2f285;
     height: 60px;
     line-height: 60px;
     padding: 0 15px;
@@ -72,7 +75,7 @@ export default {
     margin:0;
     margin-top: -30px;
 }
-.modal-container{
+.my-modal-container{
 	position:relative;
 }
 #slider-controls li:hover {
@@ -100,8 +103,14 @@ export default {
 }
 </style>
 <style>
+.tns-slide-active{
+	height:100%;
+}
 .tns-outer.tns-ovh{
 	text-align: center;
+}
+.tns-item p {
+	font-size:initial;
 }
 .tns-outer.tns-ovh.tnsnav{
 	display: inline-block;

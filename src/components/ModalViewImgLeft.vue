@@ -1,10 +1,13 @@
 <template>
-	<div class="row">
-		<div class="col-5">
-			<component :data="slide.objectData" :is="slide.objectComponent" class="img-responsive " />
-		</div>
-		<div class="col-7" v-html="slide.textHtml">
+	<div class="container">
+		<div class="row" style="height:100%">
+			<div class="col-5" style="border-right: 1px dotted">
+				<img v-if="data.mode === 'img'" class="img-responsive" :src="data.imgSrc" />
+				<component v-else :data="data.objectData" :is="data.objectComponent" class="img-responsive "></component>
+			</div>
+			<div class="col-7" v-html="data.contentHtml">
 
+			</div>
 		</div>
 	</div>
 </template>
@@ -18,8 +21,10 @@ export default {
 	},
 	data(){
 		return {
-			src: '' ,
-		}
+		};
+	},
+	computed:{
+		data(){return this.slide.data;},
 	},
 	props:{
 		slide:{

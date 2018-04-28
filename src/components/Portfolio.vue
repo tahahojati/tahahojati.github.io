@@ -3,17 +3,16 @@
 	<project-modal ref="modal" :project="modalProject"> </project-modal>
 	<div class="row">
 		<article v-for="project of projects" class="col-6 col-sm-4 col-lg-3">
-			<div class=" card" @click="openModal(project)">
+			<div class=" card" @click="openModal(project)" :style="project.getCardStyle()">
 				<div class="image">
-					<img src="http://materializecss.com/images/sample-1.jpg">
-					<span class="card-title"> {{project.title}}</span>
+					<img :src="project.cardImage">
+					<span class="card-title"> {{project.cardTitle}}</span>
 				</div>
 
 				<div class="text">
-
-
-					<p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.</p>
-
+					<template v-if="project.cardTextHtml != null" v-html="project.cardTextHtml"></template>
+					<p v-else v-html="project.cardText"></p> 
+					<!-- Above: still want to allow tags like <strong> <em> <br/> inside our card -->
 				</div>				
 			</div>
 		</article>
@@ -98,7 +97,7 @@ export default {
 	.text {
 		background: #FFF;
 		padding: 20px;
-		height: 150px;
+		height: 100px;
 	}
 
 	.text p {

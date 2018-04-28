@@ -1,19 +1,19 @@
 <template>
   <div v-if="exists">
-    <transition name="modal">
+    <transition name="my-modal">
       <div class="modal-mask" v-show="shown">
         <div class="modal-wrapper">
-          <div class="modal-container">
+          <div class="my-modal-container">
             <button type="button" class="close" @click="hideInternal()"></button>
-            <div class="modal-header">
+            <div class="my-modal-header">
               <slot name="header"></slot>
             </div>
-            <div class="modal-body">
+            <div class="my-modal-body">
               <slot name="body">
                 default body
               </slot>
             </div>
-            <div class="modal-footer"><slot name="footer"></slot></div>
+            <div class="my-modal-footer"><slot name="footer"></slot></div>
             <slot name="container"></slot>
           </div>
         </div>
@@ -98,11 +98,13 @@ button.close::after{
 }*/
 .modal-wrapper {
   display: table-cell;
+  text-align: center;
   vertical-align: middle;
 }
 
-.modal-container {
-  width: 80%;
+.my-modal-container {
+  display: inline-block;
+  max-width: 80%;
   margin: 0px auto;
   /*padding: 20px 45px;*/
   background-color: #fff;
@@ -113,18 +115,18 @@ button.close::after{
 }
 
 @media screen and (min-width:1100px){
-  .modal-container{
-    width:950px;
+  .my-modal-container{
+    max-width:950px;
   }
 }
 
-.modal-header h3 {
-  margin-top: 0;
+.my-modal-header h3 {
+  margin: 0 0;
   color: #42b983;
 }
 
-.modal-body {
-  margin: 40px 45px;
+.my-modal-body {
+  margin: 10px 0;
 }
 
 .modal-default-button {
@@ -149,8 +151,8 @@ button.close::after{
 }
 
 
-.modal-enter .modal-container,
-.modal-leave-active .modal-container {
+.modal-enter .my-modal-container,
+.modal-leave-active .my-modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
