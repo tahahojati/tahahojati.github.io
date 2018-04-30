@@ -24,6 +24,7 @@
 import Modal from './Modal.vue';
 import ModalViewImgTop from './ModalViewImgTop.vue';
 import ModalViewImgLeft from './ModalViewImgLeft.vue';
+import ModalViewImgOnly from './ModalViewImgOnly.vue';
 // import ModalViewImgWhole from './ModalViewImgWhole.vue';
 import TinySlider from 'vue-tiny-slider';
 
@@ -35,6 +36,7 @@ export default {
 	components: {
 		ModalViewImgTop,
 		ModalViewImgLeft,
+		ModalViewImgOnly,
 		// ModalViewImgWhole,
 		Modal,
 		TinySlider,
