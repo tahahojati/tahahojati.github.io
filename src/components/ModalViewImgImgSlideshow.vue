@@ -17,7 +17,7 @@ import TinySlider from 'vue-tiny-slider';
 export default {
 	data(){
 		return {
-			imagePaths: [],
+			
 		};
 	},
 	components: {
@@ -25,15 +25,16 @@ export default {
 	},
 	props: {
 		data: {
-			type: Array,
+			type: Object,
 		},
-		autoPlayTimeout:{
-			type: Number,
-			default: 4500,
-		}
 	},
-	created(){
-		this.imagePaths = this.data;
+	computed:{
+		imagePaths(){
+			return this.data.imagePaths; 
+		},
+		autoPlayTimeout(){
+			return this.data.autoPlayTimeout || 4500; 
+		}
 	},
 	methods:{
 

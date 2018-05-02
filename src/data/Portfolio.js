@@ -90,7 +90,7 @@ Project.projectList.opihi = new Project({
 				mode:'img',
 				imgSrc: requireImages('./opihi/OPIHI-pre.png'),
 				contentText: null,
-				contentHtml: '<h2> Introduction </h2> <p> OPIHI is a school-based monitoring program of Hawaii’s rocky intertidal where students improve their scientific skills while providing assistance gathering data in an area that has not been well studied in Hawaii. <br> <br> While taking part in OPIHI, students learn about topics in marine ecology and conservation, species identification, and sampling techniques. Most importantly, students build their confidence and interest in science. OPIHI provides opportunities for students to develop and investigate their own questions within the framework of monitoring biodiversity in the intertidal. </p> <p>I developed this website to collect and analyze the data produced by the participants.  The website is online at <a href="http://opihi.crdg.hawaii.edu/" target="_blank">https://opihi.crdg.hawaii.edu/</a></p></div>',
+				contentHtml: '<h2> Introduction </h2> <p> OPIHI is a school-based monitoring program of Hawaii’s rocky intertidal where students improve their scientific skills while providing assistance gathering data in an area that has not been well studied in Hawaii. <br> <br> While taking part in OPIHI, students learn about topics in marine ecology and conservation, species identification, and sampling techniques. Most importantly, students build their confidence and interest in science. OPIHI provides opportunities for students to develop and investigate their own questions within the framework of monitoring biodiversity in the intertidal. </p> <p>I developed this website to collect and analyze the data produced by the participants.  The website is online at <a href="http://opihi.crdg.hawaii.edu/" target="_blank">https://opihi.crdg.hawaii.edu/</a>.</p></div>',
 				getContentStyle(){return {background:'#d2d2d259'}},
 				getObjectStyle(){return {width: '100%', height:'360px', 'object-fit': 'cover'}},
 			},
@@ -171,58 +171,69 @@ Project.projectList.asshto = new Project({
 	],
 
 });
-Project.projectList.asshto2 = new Project({
-	id:2,
+Project.projectList.farmsafe = new Project({
+	id:3,
 	cardBackgroundColor:'grey',
-	title: 'AASHTO LRFD Design Software',
-	cardTitle: 'AASHTO calculator',
-	subtitle: 'Angular Single Page Application',
-	cardSubtitle: '',
-	techs: ['Angular', 'Bootstrap', 'Mean'],
-	tags: ['__techs__', 'Front-End Development', 'Full-Stack Development', 'JavaScript', 'MongoDb', 'Node', 'Web' ],
-	cardText: 'a web application that assists structural engineers in their Aashto LFRD bridge designs through performing calculations and generating pdf reports.',
-	live: 'http://aashtobridgedesign.com/',
-	cardImage: requireImages('./aashto/cardImage.jpg'),
+	title: 'Farm Akamai',
+	cardTitle: null,
+	subtitle: 'Second place winner of Hawaii Agricultural Hackathon (Agathon 2018)',
+	cardSubtitle: null,
+	github: 'https://github.com/FarmEd-HI/FarmEd-Android',
+	techs: ['Android'],
+	tags: ['__techs__', 'contest', 'Hackathons'],
+	cardText: 'Winner of 2018 Hawaii Agricultural Hackathon <br/> an Android app designed to teach ESL farmers about the state\'s standards.',
+	live: null,
+	cardImage: requireImages('./farmsafe/cardImage.jpg'),
 	slides:[
 		new Project.Slide({
 			layoutComponent: 'ModalViewImgTop',
 			title: 'Introduction',
 			data: {
 				mode:'img',
-				imgSrc: requireImages('./aashto/aashto.png'),
+				imgSrc: requireImages('./farmsafe/farmsafe_big.jpg'),
 				contentText: null,
-				contentHtml: '<h2> Introduction </h2> <p style="text-align:initial"> This website assists structural engineers in their Aashto LFRD bridge design through providing important calculations and saving them on cloud for later access. The calculations can be converted to pdf documents and printed at users\'s request. <br> The website is live at <a href="http://aashtobridgedesign.com/">http://aashtobridgedesign.com/</a>.  You will need to register for a free account in order to use the website. </p>',
+				contentHtml: '<h2> Introduction </h2> <p style="text-align:initial"> In the 2018 Hawaii Agricultural Hackathon, we were presented with a challenge from the industry insiders.  Many of laborers in Hawaii\'s farms are immigrants who are not fluent in English.  These farmers have difficulty follwing standards of work and farming in United States.  The challenge was to implement a low-cost and easy to use solution for such farmers. <br/> I teamed up with two other developers and together we designed an Android app that would allow farm laborers to educate themselves in their native language and without access to internet.  Our app was recognized as the second best project in the Hackathon earning us $2000 and a big sense of achievement.</p>',
 				getContentStyle(){return {background:'#d2d2d259'}},
-				getObjectStyle(){return {width: '100%', height:'360px', 'object-fit': 'cover'}},
+				getObjectStyle(){return {width: '100%', height:'auto', 'min-height': '200px', 'object-fit': 'cover'}},
 			},
 		}),
 		new Project.Slide({
 			layoutComponent: 'ModalViewImgLeft',
+			title: 'Design',
+			data: {
+				mode:'component',
+				objectData: {
+					// data must be an array image paths
+					imagePaths: [
+						requireImages('./farmsafe/farmsafe_proto1.png'),
+						requireImages('./farmsafe/farmsafe_proto2.png'),
+						requireImages('./farmsafe/farmsafe_proto3.png'),
+						requireImages('./farmsafe/farmsafe_proto4.png'),
+						requireImages('./farmsafe/farmsafe_proto5.png'),
+					],
+				},
+				objectComponent: 'ModalViewImgImgSlideshow',
+				contentHtml:'<h2 class="text-center">Design</h2><p style="text-align:initial"> We designed the app using proto.io as seen on the side.  We chose the mobile platform over web/desktop as we understood that the app must be available to farmers in the field who do not necessarily have internet connection.   Moreover, we wanted a simple design that was mostly self-explanatory. <br/> The foundation of the design was to provide farmers with a set of mutimedia enabled courses in farming standards. We also wanted to make it possible for the farmer to have access to a knowledge base or FAQs of farming and to be able to ask question from experts if they needed to. </p>',
+			}
+		}),		
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgLeft',
 			title: 'Development',
 			data: {
-				mode:'img',
-				imgSrc: requireImages('./aashto/aashto1.png'),
-				contentHtml:'<h2 class="text-center">Development</h2><p style="text-align:initial"> I developed the website using node.js and MEAN stack framework (MongoDb, Express, Angular, Node). I designed the backend with SOA philosophy (Service Oriented Architecture) in mind, so that it can easily support mobile app clients or external api requests. The front-end is developed as a single page application using Angular.js.  <br/> The application is hosted on an Ubuntu droplet on DigitalOcean.  The code for the project is not available on my github though I am open to sharing it if requested.</p>',
+				mode:'component',
+				objectComponent: 'ModalViewImgImgSlideshow',
+				objectData: {
+					imagePaths: [
+						requireImages('./farmsafe/farmsafe1.png'),
+						requireImages('./farmsafe/farmsafe2.png'),
+						requireImages('./farmsafe/farmsafe3.png'),
+						requireImages('./farmsafe/farmsafe4.png'),
+						requireImages('./farmsafe/farmsafe5.png'),
+					],
+				},
+				contentHtml:'<h2 class="text-center">Development</h2><p style="text-align:initial"> As the only developer on the team familiar with the Android platform, I led our development efforts.  In the course of 18 hours and after many cups of coffee we were able to create the partial prototype seen on the side.  My team and I are still hoping to develop the app further and hopefully release it as a final product on Google Play store at some point. </p>',
 			}
 		}),		
-		new Project.Slide({
-			layoutComponent: 'ModalViewImgOnly',
-			title: 'Calculations',
-			data: {
-				mode:'img',
-				imgSrc: requireImages('./aashto/aashto2.png'),
-				contentHtml:'',
-			}
-		}),		
-		new Project.Slide({
-			layoutComponent: 'ModalViewImgOnly',
-			title: 'Reports',
-			data: {
-				mode:'img',
-				imgSrc: requireImages('./aashto/aashto3.png'),
-				contentHtml:'',
-			}
-		}),
 	],
 
 });

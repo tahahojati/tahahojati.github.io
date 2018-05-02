@@ -79,6 +79,7 @@ export default {
 		opacity: 1;
 	}
 	.card .image .card-title {
+		text-shadow: -1px 0 5px grey, 0 1px 5px grey, 1px 0 5px grey, 0 -1px 5px grey;
 		position: absolute;
 		left:0;
 		bottom: 0;
