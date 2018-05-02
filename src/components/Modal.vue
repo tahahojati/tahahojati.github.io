@@ -90,20 +90,20 @@ button.close::after{
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, .5);
-  display: table;
+  /*display: table;*/
   transition: opacity 0.5s ease;
 }
 /*.modal-leave-to, .modal-enter {
   display: none;
 }*/
 .modal-wrapper {
-  display: table-cell;
+  /*display: table-cell;*/
   text-align: center;
   vertical-align: middle;
 }
 
 .my-modal-container {
-  display: inline-block;
+  /*display: inline-block;*/
   max-width: 96%;
   margin: 0px auto;
   /*padding: 20px 45px;*/

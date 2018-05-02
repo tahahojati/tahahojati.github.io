@@ -6,8 +6,8 @@
 		</div>
 		<div class="container-fluid" :style="data.getContentStyle()">
 			<div class="row">
-				<div class="col-12" v-if="data.contentHtml" v-html="data.contentHtml" ></div>
-				<div class="col-12" v-else><p v-html="data.ContentText"></p></div>
+				<div class="col-12 slide-text-content" v-if="data.contentHtml" v-html="data.contentHtml" ></div>
+				<div class="col-12 slide-text-content" v-else><p v-html="data.ContentText"></p></div>
 			</div>
 		</div>
 	</div>
@@ -40,5 +40,10 @@ div{
 }
 .top-modal-slide-img {
 	max-height: 50vh;
+}
+</style>
+<style>
+.slide-text-content, .slide-text-content p ,.slide-text-content h2{
+	overflow-x: hidden; 
 }
 </style>
