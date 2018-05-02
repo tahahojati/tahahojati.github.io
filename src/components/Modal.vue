@@ -104,7 +104,7 @@ button.close::after{
 
 .my-modal-container {
   display: inline-block;
-  max-width: 80%;
+  max-width: 96%;
   margin: 0px auto;
   /*padding: 20px 45px;*/
   background-color: #fff;
@@ -113,7 +113,11 @@ button.close::after{
   transition: all 0.5s ease;
   font-family: Helvetica, Arial, sans-serif;
 }
-
+@media screen and (min-width:600px){
+  .my-modal-container{
+    max-width:80%;
+  }
+}
 @media screen and (min-width:1100px){
   .my-modal-container{
     max-width:950px;

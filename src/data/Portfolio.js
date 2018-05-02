@@ -171,6 +171,226 @@ Project.projectList.asshto = new Project({
 	],
 
 });
+Project.projectList.asshto2 = new Project({
+	id:2,
+	cardBackgroundColor:'grey',
+	title: 'AASHTO LRFD Design Software',
+	cardTitle: 'AASHTO calculator',
+	subtitle: 'Angular Single Page Application',
+	cardSubtitle: '',
+	techs: ['Angular', 'Bootstrap', 'Mean'],
+	tags: ['__techs__', 'Front-End Development', 'Full-Stack Development', 'JavaScript', 'MongoDb', 'Node', 'Web' ],
+	cardText: 'a web application that assists structural engineers in their Aashto LFRD bridge designs through performing calculations and generating pdf reports.',
+	live: 'http://aashtobridgedesign.com/',
+	cardImage: requireImages('./aashto/cardImage.jpg'),
+	slides:[
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgTop',
+			title: 'Introduction',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto.png'),
+				contentText: null,
+				contentHtml: '<h2> Introduction </h2> <p style="text-align:initial"> This website assists structural engineers in their Aashto LFRD bridge design through providing important calculations and saving them on cloud for later access. The calculations can be converted to pdf documents and printed at users\'s request. <br> The website is live at <a href="http://aashtobridgedesign.com/">http://aashtobridgedesign.com/</a>.  You will need to register for a free account in order to use the website. </p>',
+				getContentStyle(){return {background:'#d2d2d259'}},
+				getObjectStyle(){return {width: '100%', height:'360px', 'object-fit': 'cover'}},
+			},
+		}),
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgLeft',
+			title: 'Development',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto1.png'),
+				contentHtml:'<h2 class="text-center">Development</h2><p style="text-align:initial"> I developed the website using node.js and MEAN stack framework (MongoDb, Express, Angular, Node). I designed the backend with SOA philosophy (Service Oriented Architecture) in mind, so that it can easily support mobile app clients or external api requests. The front-end is developed as a single page application using Angular.js.  <br/> The application is hosted on an Ubuntu droplet on DigitalOcean.  The code for the project is not available on my github though I am open to sharing it if requested.</p>',
+			}
+		}),		
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgOnly',
+			title: 'Calculations',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto2.png'),
+				contentHtml:'',
+			}
+		}),		
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgOnly',
+			title: 'Reports',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto3.png'),
+				contentHtml:'',
+			}
+		}),
+	],
+
+});
+Project.projectList.asshto3 = new Project({
+	id:2,
+	cardBackgroundColor:'grey',
+	title: 'AASHTO LRFD Design Software',
+	cardTitle: 'AASHTO calculator',
+	subtitle: 'Angular Single Page Application',
+	cardSubtitle: '',
+	techs: ['Angular', 'Bootstrap', 'Mean'],
+	tags: ['__techs__', 'Front-End Development', 'Full-Stack Development', 'JavaScript', 'MongoDb', 'Node', 'Web' ],
+	cardText: 'a web application that assists structural engineers in their Aashto LFRD bridge designs through performing calculations and generating pdf reports.',
+	live: 'http://aashtobridgedesign.com/',
+	cardImage: requireImages('./aashto/cardImage.jpg'),
+	slides:[
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgTop',
+			title: 'Introduction',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto.png'),
+				contentText: null,
+				contentHtml: '<h2> Introduction </h2> <p style="text-align:initial"> This website assists structural engineers in their Aashto LFRD bridge design through providing important calculations and saving them on cloud for later access. The calculations can be converted to pdf documents and printed at users\'s request. <br> The website is live at <a href="http://aashtobridgedesign.com/">http://aashtobridgedesign.com/</a>.  You will need to register for a free account in order to use the website. </p>',
+				getContentStyle(){return {background:'#d2d2d259'}},
+				getObjectStyle(){return {width: '100%', height:'360px', 'object-fit': 'cover'}},
+			},
+		}),
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgLeft',
+			title: 'Development',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto1.png'),
+				contentHtml:'<h2 class="text-center">Development</h2><p style="text-align:initial"> I developed the website using node.js and MEAN stack framework (MongoDb, Express, Angular, Node). I designed the backend with SOA philosophy (Service Oriented Architecture) in mind, so that it can easily support mobile app clients or external api requests. The front-end is developed as a single page application using Angular.js.  <br/> The application is hosted on an Ubuntu droplet on DigitalOcean.  The code for the project is not available on my github though I am open to sharing it if requested.</p>',
+			}
+		}),		
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgOnly',
+			title: 'Calculations',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto2.png'),
+				contentHtml:'',
+			}
+		}),		
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgOnly',
+			title: 'Reports',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto3.png'),
+				contentHtml:'',
+			}
+		}),
+	],
+
+});
+Project.projectList.asshto4 = new Project({
+	id:2,
+	cardBackgroundColor:'grey',
+	title: 'AASHTO LRFD Design Software',
+	cardTitle: 'AASHTO calculator',
+	subtitle: 'Angular Single Page Application',
+	cardSubtitle: '',
+	techs: ['Angular', 'Bootstrap', 'Mean'],
+	tags: ['__techs__', 'Front-End Development', 'Full-Stack Development', 'JavaScript', 'MongoDb', 'Node', 'Web' ],
+	cardText: 'a web application that assists structural engineers in their Aashto LFRD bridge designs through performing calculations and generating pdf reports.',
+	live: 'http://aashtobridgedesign.com/',
+	cardImage: requireImages('./aashto/cardImage.jpg'),
+	slides:[
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgTop',
+			title: 'Introduction',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto.png'),
+				contentText: null,
+				contentHtml: '<h2> Introduction </h2> <p style="text-align:initial"> This website assists structural engineers in their Aashto LFRD bridge design through providing important calculations and saving them on cloud for later access. The calculations can be converted to pdf documents and printed at users\'s request. <br> The website is live at <a href="http://aashtobridgedesign.com/">http://aashtobridgedesign.com/</a>.  You will need to register for a free account in order to use the website. </p>',
+				getContentStyle(){return {background:'#d2d2d259'}},
+				getObjectStyle(){return {width: '100%', height:'360px', 'object-fit': 'cover'}},
+			},
+		}),
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgLeft',
+			title: 'Development',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto1.png'),
+				contentHtml:'<h2 class="text-center">Development</h2><p style="text-align:initial"> I developed the website using node.js and MEAN stack framework (MongoDb, Express, Angular, Node). I designed the backend with SOA philosophy (Service Oriented Architecture) in mind, so that it can easily support mobile app clients or external api requests. The front-end is developed as a single page application using Angular.js.  <br/> The application is hosted on an Ubuntu droplet on DigitalOcean.  The code for the project is not available on my github though I am open to sharing it if requested.</p>',
+			}
+		}),		
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgOnly',
+			title: 'Calculations',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto2.png'),
+				contentHtml:'',
+			}
+		}),		
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgOnly',
+			title: 'Reports',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto3.png'),
+				contentHtml:'',
+			}
+		}),
+	],
+
+});
+Project.projectList.asshto5 = new Project({
+	id:2,
+	cardBackgroundColor:'grey',
+	title: 'AASHTO LRFD Design Software',
+	cardTitle: 'AASHTO calculator',
+	subtitle: 'Angular Single Page Application',
+	cardSubtitle: '',
+	techs: ['Angular', 'Bootstrap', 'Mean'],
+	tags: ['__techs__', 'Front-End Development', 'Full-Stack Development', 'JavaScript', 'MongoDb', 'Node', 'Web' ],
+	cardText: 'a web application that assists structural engineers in their Aashto LFRD bridge designs through performing calculations and generating pdf reports.',
+	live: 'http://aashtobridgedesign.com/',
+	cardImage: requireImages('./aashto/cardImage.jpg'),
+	slides:[
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgTop',
+			title: 'Introduction',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto.png'),
+				contentText: null,
+				contentHtml: '<h2> Introduction </h2> <p style="text-align:initial"> This website assists structural engineers in their Aashto LFRD bridge design through providing important calculations and saving them on cloud for later access. The calculations can be converted to pdf documents and printed at users\'s request. <br> The website is live at <a href="http://aashtobridgedesign.com/">http://aashtobridgedesign.com/</a>.  You will need to register for a free account in order to use the website. </p>',
+				getContentStyle(){return {background:'#d2d2d259'}},
+				getObjectStyle(){return {width: '100%', height:'360px', 'object-fit': 'cover'}},
+			},
+		}),
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgLeft',
+			title: 'Development',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto1.png'),
+				contentHtml:'<h2 class="text-center">Development</h2><p style="text-align:initial"> I developed the website using node.js and MEAN stack framework (MongoDb, Express, Angular, Node). I designed the backend with SOA philosophy (Service Oriented Architecture) in mind, so that it can easily support mobile app clients or external api requests. The front-end is developed as a single page application using Angular.js.  <br/> The application is hosted on an Ubuntu droplet on DigitalOcean.  The code for the project is not available on my github though I am open to sharing it if requested.</p>',
+			}
+		}),		
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgOnly',
+			title: 'Calculations',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto2.png'),
+				contentHtml:'',
+			}
+		}),		
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgOnly',
+			title: 'Reports',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./aashto/aashto3.png'),
+				contentHtml:'',
+			}
+		}),
+	],
+
+});
 // Project.projectList.opihi = new Project({
 	
 // });

@@ -2,7 +2,7 @@
 <div class="my-container container-fluid portfolio" style="opacity:1">	
 	<project-modal ref="modal" :project="modalProject"> </project-modal>
 	<div class="row">
-		<article v-for="project of projects" class="col-6 col-sm-4 col-lg-3">
+		<article v-for="project of projects" class="col-12 col-sm-6 col-lg-4 col-xl-3">
 			<div class=" card" @click="openModal(project)" :style="project.getCardStyle()">
 				<div class="image">
 					<img :src="project.cardImage">

@@ -3,7 +3,7 @@
 		<template slot="body">
 			<!-- :edgePadding="50" this was removed from below..-->
 			<tiny-slider v-if="project!=null"  :mouse-drag="true" :loop="false"
-			 items="1" :gutter="20"controlsContainer="#slider-controls"
+			 items="1" controlsContainer="#slider-controls"
 			 font-size="20px"
 			 :nav="true">
 			 	<div v-for="slide in project.slides">

@@ -1,10 +1,10 @@
 <template>
     <div id="nav_bar">
-        <a class="logo" rel="index" href="https://jacekjeznach.com/">
+        <router-link class="logo" rel="index" to="/">
             <img src="../assets/logo.png" alt="Developer, Software Engineer">
             <!-- <img src="../assets/logo_sub.png" alt="Developer, Software Engineer"> -->
-        </a>
-        <nav class="en">
+        </router-link>
+        <nav class="en" :class="navClass" @click="showMobileNav=false">
             <router-link rel="index" to="/"  activeClass="active" exact>
                 <i class="fa fa-home">
                 </i>
@@ -58,9 +58,27 @@
                 </a>
             </li> -->
         </ul>
-        <a id="mobile-link" href="file:///C:/Users/tpourjalali/Desktop/tahahojati.github.io/index.html">
+        <a id="mobile-link" @click="showMobileNav=!showMobileNav">
             <i class="fa fa-bars">
             </i>
         </a>
     </div>
 </template>
+
+<script>
+    export default {
+        data(){
+            return {
+                showMobileNav: false,
+            };
+        },
+        computed: {
+            navClass(){
+                if(this.showMobileNav)
+                    return "show";
+                else 
+                    return ""; 
+            }
+        }
+    }
+</script>
