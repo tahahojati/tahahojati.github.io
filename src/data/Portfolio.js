@@ -237,58 +237,72 @@ Project.projectList.farmsafe = new Project({
 	],
 
 });
-Project.projectList.asshto3 = new Project({
-	id:2,
+Project.projectList.ristorante = new Project({
+	id:4,
 	cardBackgroundColor:'grey',
-	title: 'AASHTO LRFD Design Software',
-	cardTitle: 'AASHTO calculator',
+	title: 'Ristorante con Fusion',
+	cardTitle: 'Ristorante',
 	subtitle: 'Angular Single Page Application',
 	cardSubtitle: '',
-	techs: ['Angular', 'Bootstrap', 'Mean'],
-	tags: ['__techs__', 'Front-End Development', 'Full-Stack Development', 'JavaScript', 'MongoDb', 'Node', 'Web' ],
-	cardText: 'a web application that assists structural engineers in their Aashto LFRD bridge designs through performing calculations and generating pdf reports.',
-	live: 'http://aashtobridgedesign.com/',
-	cardImage: requireImages('./aashto/cardImage.jpg'),
+	techs: ['Angular', 'Bootstrap', 'Mean', 'Ionic'],
+	tags: ['__techs__', 'Front-End Development', 'Full-Stack Development', 'JavaScript', 'MongoDb', 'Node', 'Web', 'Mobile' ],
+	github: 'https://github.com/tahahojati/conFusion-Angular',
+	cardText: 'a web and a hybrid mobile application for a fictitious restaurant, built using AngularJS, Ionic, and Node.js.',
+	live: null,
+	cardImage: requireImages('./ristorante/cardImage.jpg'),
 	slides:[
 		new Project.Slide({
 			layoutComponent: 'ModalViewImgTop',
 			title: 'Introduction',
 			data: {
 				mode:'img',
-				imgSrc: requireImages('./aashto/aashto.png'),
+				imgSrc: requireImages('./ristorante/ristorante.png'),
 				contentText: null,
-				contentHtml: '<h2> Introduction </h2> <p style="text-align:initial"> This website assists structural engineers in their Aashto LFRD bridge design through providing important calculations and saving them on cloud for later access. The calculations can be converted to pdf documents and printed at users\'s request. <br> The website is live at <a href="http://aashtobridgedesign.com/">http://aashtobridgedesign.com/</a>.  You will need to register for a free account in order to use the website. </p>',
+				contentHtml: '<h2> Ristorante con Fusion </h2> <p style="text-align:initial"> This project is a single page application for a fictitious restaurant, built using AngularJS. I created this website by following coursera\'s online courses on Full Stack Development.  The backend of the the web app was designed using Express.js and MondoDb.  You may find the code for the project on my github at <a href="https://github.com/tahahojati/conFusion-Angular">https://github.com/tahahojati/conFusion-Angular/</a>.</p><p>I also created a hybrid mobile app for the restaurant using ionic platform. You may find the code for the hybrid app on <a href="https://github.com/tahahojati/conFusion-Ionic">its own github page</a>. </p>',
 				getContentStyle(){return {background:'#d2d2d259'}},
-				getObjectStyle(){return {width: '100%', height:'360px', 'object-fit': 'cover'}},
+				getObjectStyle(){return {width: '100%', height:'260px', 'object-fit': 'cover'}},
 			},
 		}),
 		new Project.Slide({
+			layoutComponent: 'ModalViewImgTop',
+			title: 'Website',
+			data: {
+				mode:'component',
+				objectComponent: 'ModalViewImgImgSlideshow',
+				objectData: {
+					imagePaths: [
+						requireImages('./ristorante/ristorante1.png'),
+						requireImages('./ristorante/ristorante2.png'),
+						requireImages('./ristorante/ristorante3.png'),
+					],
+				},
+				contentHtml:'<h2 class="text-center">Web Application</h2><p style="text-align:initial">The website features: <ol><li>A home page that shows the restaurant\'s latest promotions</li> <li> A menu page that allows guests to choose the food category they would like to explore by choosing a tab </li> <li>Singular item pages that allow the guests to submit their feedback using a form. The form is validated using Angular\'s form validation capabilities </li></p>',
+			}
+		}),		
+		new Project.Slide({
 			layoutComponent: 'ModalViewImgLeft',
-			title: 'Development',
+			title: 'Mobile Apps',
 			data: {
-				mode:'img',
-				imgSrc: requireImages('./aashto/aashto1.png'),
-				contentHtml:'<h2 class="text-center">Development</h2><p style="text-align:initial"> I developed the website using node.js and MEAN stack framework (MongoDb, Express, Angular, Node). I designed the backend with SOA philosophy (Service Oriented Architecture) in mind, so that it can easily support mobile app clients or external api requests. The front-end is developed as a single page application using Angular.js.  <br/> The application is hosted on an Ubuntu droplet on DigitalOcean.  The code for the project is not available on my github though I am open to sharing it if requested.</p>',
+				mode:'component',
+				objectComponent: 'ModalViewImgImgSlideshow',
+				objectData:{
+					imagePaths: [
+						requireImages('./ristorante/ristorante-splsh.png'),
+						requireImages('./ristorante/ristorante-sidebar.png'),
+						requireImages('./ristorante/ristorante-home.png'),
+						requireImages('./ristorante/ristorante-about.png'),
+						requireImages('./ristorante/ristorante-register.png'),
+						requireImages('./ristorante/ristorante-reserve.png'),
+						requireImages('./ristorante/ristorante-menu.png'),
+						requireImages('./ristorante/ristorante-menu2.png'),
+						requireImages('./ristorante/ristorante-menu3.png'),
+						requireImages('./ristorante/ristorante-favorites.png'),
+					],
+				},
+				contentHtml:'<h2 class="text-center">Mobile App</h2><p style="text-align:initial">The app design takes advantage of ionic\'s splash screen and side bar view for a native look. Angular UI Router was used to set up the navigation <br/><br/> Throughout the app resources are loaded dynamically via AJAX requests to a local server using the ngResource modul of angular. This includes the text and the images in the home page, the list of dishes in the menu page and the list of restaurant founders in the about page. <br/><br/> Ionic modals were used extensively in design of the login and register views as well as reservation capability of the app. Cordova\'s wrappers were used in the project to access native device functions such as taking a picture with camera or choosing a picture from gallery. <br/><br/>HTML5 local storage was used to persist data in JSON format between sessions of the app. Cordova wrappers were used to provide pop-up messages and notification messages in reacion to user\'s choices.</p>',
+				
 			}
-		}),		
-		new Project.Slide({
-			layoutComponent: 'ModalViewImgOnly',
-			title: 'Calculations',
-			data: {
-				mode:'img',
-				imgSrc: requireImages('./aashto/aashto2.png'),
-				contentHtml:'',
-			}
-		}),		
-		new Project.Slide({
-			layoutComponent: 'ModalViewImgOnly',
-			title: 'Reports',
-			data: {
-				mode:'img',
-				imgSrc: requireImages('./aashto/aashto3.png'),
-				contentHtml:'',
-			}
-		}),
+		}),	
 	],
 
 });
