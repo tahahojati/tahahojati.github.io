@@ -97,9 +97,12 @@ button.close::after{
   display: none;
 }*/
 .modal-wrapper {
+  position: absolute;
+  width: 100%;
+  top: calc(60px + 2vh);
   /*display: table-cell;*/
-  text-align: center;
-  vertical-align: middle;
+  /*text-align: center;*/
+/*  vertical-align: middle;*/
 }
 
 .my-modal-container {
