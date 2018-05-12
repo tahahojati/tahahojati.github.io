@@ -1,7 +1,10 @@
 <template>
 	<tiny-slider  :mouse-drag="true" :loop="true" :speed="400" :controls="false" :autoplay="true" 
 	 :autoplayHoverPause="true" :autoplayTimeout="autoPlayTimeout"
+	 @getInfo="info($event)"
 	 mode="gallery"
+	 nested="inner"
+	 :autoInit="false"
 	 :autoplayButtonOutput="false"
 	 items="1" :gutter="0" 
 	 :nav="false">
@@ -37,7 +40,18 @@ export default {
 		}
 	},
 	methods:{
+		info(e){
+			console.log(e);
+		},
+		start(){
+			this.$children[0].init(); 
+		}
 
+	},
+	mounted(){
+		setTimeout(()=>this.$children[0].init(), 200);
+		console.log("rebuilt");
+		window.comp = this; 
 	}
 };
 </script>

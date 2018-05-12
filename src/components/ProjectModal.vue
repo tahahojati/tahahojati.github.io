@@ -2,13 +2,17 @@
 	<modal ref="modal"  @changeVisibility="$emit('changeVisibility', false)">
 		<template slot="body">
 			<!-- :edgePadding="50" this was removed from below..-->
-			<tiny-slider v-if="project!=null"  :mouse-drag="true" :loop="false"
+			<tiny-slider ref="sliderComponent"  :mouse-drag="true" :loop="false"
+			:autoInit="false"
+			 nested="outer"
 			 items="1" controlsContainer="#slider-controls"
 			 font-size="20px"
 			 :nav="true">
-			 	<div v-for="slide in project.slides">
-			 		<component :is="slide.layoutComponent" :slide="slide"/>
-			 	</div>
+			 	<template v-if="project !== null">
+				 	<div  v-for="slide in project.slides">
+				 		<component :is="slide.layoutComponent" :slide="slide"/>
+				 	</div>
+			 	</template>
 			</tiny-slider>
 		</template>
 		<template slot="container">
@@ -46,7 +50,23 @@ export default {
 			type: Object,
 		},
 	},
-
+	watch:{
+		project(newval,oldval){
+			console.log(oldval, newval, this);
+			window.ss = this; 
+			const thisComponent = this ;
+			const sliderComponent = this.$refs.sliderComponent; 
+			if(oldval === null && newval !== null ){
+				debugger;
+				modalComponent.$children[0].init();
+				this.tinySlider = modalComponent.$children[0].slider; 
+				tinySlider.events.on("indexChanged", function (data){
+						console.log(data);
+					}
+				);
+			}
+		}
+	},
 	methods:{
 		showModal(){
 			console.log('inside showModal');
@@ -55,6 +75,9 @@ export default {
 		hideModal(){
 			//TODO: not implemented
 		},
+	},
+	mounted(){
+		console.log("modal mounted");
 	}
 };
 </script>

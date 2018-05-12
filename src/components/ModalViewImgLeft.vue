@@ -14,9 +14,9 @@
 
 <script>
 import ModalViewImgImgSlideshow from './ModalViewImgImgSlideshow.vue';
-
+ 
 export default {
-	components:{
+	components:{ 
 		ModalViewImgImgSlideshow,
 	},
 	data(){

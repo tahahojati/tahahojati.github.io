@@ -33,7 +33,7 @@ class Project {
 		this.sorting = sorting;
 		this.techs = techs;
 		this.tags = tags||techs;
-		if(this.tags[0] === '__techs__'){
+		if(this.tags[0] === '__techs__'){ 
 			this.tags.shift();
 			this.tags = this.tags.concat(this.techs);
 		}
