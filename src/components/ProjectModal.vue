@@ -2,18 +2,19 @@
 	<modal ref="modal"  @changeVisibility="$emit('changeVisibility', false)">
 		<template slot="body">
 			<!-- :edgePadding="50" this was removed from below..-->
-			<tiny-slider ref="sliderComponent"  :mouse-drag="true" :loop="false"
-			:autoInit="false"
-			 nested="outer"
+			<carousel ref="sliderComponent"  :mouse-drag="true" :loop="false"
+			:navigationEnabled="true"
+			 :perPage="1"
+
 			 items="1" controlsContainer="#slider-controls"
 			 font-size="20px"
 			 :nav="true">
 			 	<template v-if="project !== null">
-				 	<div  v-for="slide in project.slides">
+				 	<slide  v-for="slide in project.slides">
 				 		<component :is="slide.layoutComponent" :slide="slide"/>
-				 	</div>
+				 	</slide>
 			 	</template>
-			</tiny-slider>
+			</carousel>
 		</template>
 		<template slot="container">
 			<ul id="slider-controls">
@@ -30,7 +31,7 @@ import ModalViewImgTop from './ModalViewImgTop.vue';
 import ModalViewImgLeft from './ModalViewImgLeft.vue';
 import ModalViewImgOnly from './ModalViewImgOnly.vue';
 // import ModalViewImgWhole from './ModalViewImgWhole.vue';
-import TinySlider from 'vue-tiny-slider';
+import { Carousel, Slide } from 'vue-carousel';
 
 export default {
 	data(){
@@ -43,7 +44,8 @@ export default {
 		ModalViewImgOnly,
 		// ModalViewImgWhole,
 		Modal,
-		TinySlider,
+		Carousel,
+    	Slide
 	},
 	props: {
 		project: {
@@ -51,7 +53,7 @@ export default {
 		},
 	},
 	watch:{
-		project(newval,oldval){
+		pproject(newval,oldval){
 			console.log(oldval, newval, this);
 			window.ss = this; 
 			const thisComponent = this ;

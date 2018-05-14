@@ -1,30 +1,30 @@
 <template>
-	<tiny-slider  :mouse-drag="true" :loop="true" :speed="400" :controls="false" :autoplay="true" 
-	 :autoplayHoverPause="true" :autoplayTimeout="autoPlayTimeout"
-	 @getInfo="info($event)"
-	 mode="gallery"
-	 nested="inner"
-	 :autoInit="false"
-	 :autoplayButtonOutput="false"
-	 items="1" :gutter="0" 
-	 :nav="false">
-	 	<div v-for="path in imagePaths">
-	 		<img :src="path"/>
-	 	</div>
-	</tiny-slider>
+	<carousel  ref="carousel"
+		:perPage="1"
+		:paginationEnabled="false"
+		:speed="400"
+
+		:loop="true"
+		nested="inner">
+		<slide v-for="path in imagePaths">
+			<img :src="path"/>
+		</slide>
+	</carousel>
 </template>
 <script>
-import TinySlider from 'vue-tiny-slider';
+import { Carousel, Slide } from 'vue-carousel';
 
 
 export default {
 	data(){
 		return {
+			carouselInterval: null,
 			
 		};
 	},
 	components: {
-		TinySlider,
+		Carousel,
+		Slide,
 	},
 	props: {
 		data: {
@@ -49,10 +49,16 @@ export default {
 
 	},
 	mounted(){
-		setTimeout(()=>this.$children[0].init(), 200);
-		console.log("rebuilt");
-		window.comp = this; 
-	}
+		this.carouselInterval = setInterval(
+			() => this.$refs.carousel.advancePage(),
+			3000
+		);
+	},
+	beforeDestroy(){
+		clearInterval(this.carouselInterval);
+		console.log("destroyed");
+
+	},
 };
 </script>
 <style src="tiny-slider/dist/tiny-slider.css" >
