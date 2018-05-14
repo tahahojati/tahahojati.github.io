@@ -3,9 +3,7 @@
 		<template slot="body">
 			<!-- :edgePadding="50" this was removed from below..-->
 			<carousel ref="sliderComponent"  :mouse-drag="true" :loop="false"
-			:navigationEnabled="true"
 			 :perPage="1"
-
 			 items="1" controlsContainer="#slider-controls"
 			 font-size="20px"
 			 :nav="true">
@@ -18,8 +16,12 @@
 		</template>
 		<template slot="container">
 			<ul id="slider-controls">
-				<li class="prev tiny-slider-nav-arrow" data-controls="prev"><img src="../assets/angle-left.png" alt=""/></li>
-				<li class="next tiny-slider-nav-arrow" data-controls="next"><img src="../assets/angle-right.png" alt=""/></li>
+				<li class="prev tiny-slider-nav-arrow" @click="advanceCarousel('backward')" data-controls="prev">
+					<img src="../assets/angle-left.png" alt=""/>
+				</li>
+				<li class="next tiny-slider-nav-arrow" @click="advanceCarousel('forward')" data-controls="next">
+					<img src="../assets/angle-right.png" alt=""/>
+				</li>
 			</ul>
 		</template>
 		
@@ -70,6 +72,9 @@ export default {
 		}
 	},
 	methods:{
+		advanceCarousel(direction){
+			this.$refs.sliderComponent.advancePage(direction);
+		},
 		showModal(){
 			console.log('inside showModal');
 			this.$refs.modal.show();
