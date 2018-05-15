@@ -58,8 +58,8 @@
 		<br/> &lt;/html&gt;
 	</span>
 	<transition name="snackbar">
-		<article class="ui-snackbar-container" v-if="showPopup">
-	        <div class="ui-snackbar" transition="ui-snackbar-toggle">
+		<article class="ui-snackbar-container" v-if="showPopup" >
+	        <div class="ui-snackbar" :style="snackbarStyles" >
 	            <div class="ui-snackbar-text">{{popupMessage}}</div>
             </div>
 		</article>
@@ -83,6 +83,13 @@ export default {
 			popupColor: '',
 		}; 
 	},
+	computed:{
+		snackbarStyles(){
+			return {
+				background: this.popupColor,
+			};
+		}
+	},
 	methods: {
 		senddEmail(){
 			const message = `From: ${this.name} (${this.email})
@@ -103,7 +110,7 @@ export default {
 		},
 		sendEmail(){
 			this.beforeSendMessage();
-			this.afterSendMessage();
+			this.afterSendMessage(200);
 		},
 		beforeSendMessage(){
 			this.waitingMessageHttpRequest = true; 
@@ -123,7 +130,7 @@ export default {
 				this.popupColor = "#dc3545";
 			}
 			this.showPopup = true; 
-			setTimeout(() => this.showPopup = false, 3000);
+			setTimeout(() => this.showPopup = false, 6000);
 
 		},
 	}
@@ -191,7 +198,6 @@ export default {
 	  position: fixed;
 	  overflow: hidden;
 	  bottom: 0;
-	  transition: all 0.5s ease;
 	  right: 15px;
 	}
 	.ui-snackbar {
@@ -208,7 +214,7 @@ export default {
 	}
 	.ui-snackbar-text {
 	  font-size: 14px;
-	  /*color: #fff;*/
+	  color: #fff;
 	}
 	/*.ui-snackbar-action {
 	  margin-left: auto;
@@ -223,8 +229,13 @@ export default {
 	  text-transform: uppercase;
 	  color: #ffeb3b;
 	}*/
-	.snackbar-leave-active, .snackbar-enter {
-	  transform: tranlateX(100px);
+
+	.snackbar-leave-to, .snackbar-enter {
+	  right:-350px;
+	  opacity: 0; 
+	}
+	.snackbar-enter-active, .snackbar-leave-active{
+		transition: right 1s ease, opacity 1s ease; 
 	}
 	.ui-snackbar-toggle-transition .ui-snackbar-text,
 	.ui-snackbar-toggle-transition .ui-snackbar-action {
