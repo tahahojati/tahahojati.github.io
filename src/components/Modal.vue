@@ -99,7 +99,8 @@ button.close::after{
 .modal-wrapper {
   position: absolute;
   width: 100%;
-  top: calc(60px + 2vh);
+  height: calc(96vh - 40px);
+  top: calc(40px + 2vh);
   /*display: table-cell;*/
   /*text-align: center;*/
 /*  vertical-align: middle;*/
@@ -107,6 +108,7 @@ button.close::after{
 
 .my-modal-container {
   /*display: inline-block;*/
+  margin-top:-50px;
   max-width: 96%;
   margin: 0px auto;
   /*padding: 20px 45px;*/

@@ -6,6 +6,7 @@
 			 :perPage="1"
 			 items="1" controlsContainer="#slider-controls"
 			 font-size="20px"
+			 paginationColor="#a2a2a2"
 			 :nav="true">
 			 	<template v-if="project !== null">
 				 	<slide  v-for="slide in project.slides">
@@ -98,7 +99,7 @@ export default {
     position: absolute;
     list-style: none;
     top: 50%;
-    background: #f2f2f285;
+    background: #cccacac7;
     height: 60px;
     line-height: 60px;
     padding: 0 15px;
@@ -111,7 +112,7 @@ export default {
 	position:relative;
 }
 #slider-controls li:hover {
-    background: #f2f2f2;
+    background: #cccaca;
 }
 .tiny-slider-nav-arrow{
 	width:45px;

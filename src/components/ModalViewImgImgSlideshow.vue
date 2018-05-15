@@ -7,7 +7,7 @@
 		:loop="true"
 		nested="inner">
 		<slide v-for="path in imagePaths">
-			<img :src="path"/>
+			<img class="center-horizontal" :src="path"/>
 		</slide>
 	</carousel>
 </template>
@@ -61,12 +61,10 @@ export default {
 	},
 };
 </script>
-<style src="tiny-slider/dist/tiny-slider.css" >
-</style>
-<style src="../styles/tiny-slider-extra.css" >
-</style>
-<style>
-tiny-slider{
-	margin: 0 30px;
-}
+<style scoped>
+	.center-horizontal{
+		margin-right: auto;
+		margin-left: auto;
+		display: block;
+	}
 </style>

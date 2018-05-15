@@ -47,6 +47,7 @@ export default {
 
 <style scoped>
 	.card {
+		font-size:13px;
 		cursor: pointer;
 		display: inline-block;
 		box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
@@ -100,7 +101,7 @@ export default {
 	.text {
 		background: #FFF;
 		padding: 20px;
-		height: 100px;
+		height: 140px;
 	}
 
 	.text p {
