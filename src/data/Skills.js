@@ -1,16 +1,24 @@
 import Chance from 'chance';
 const chance = new Chance();
 const Colors = [
-	['#d99cd1', '#c99cd1', '#b99cd1', '#a99cd1'],
-	['#403030', '#f97a7a'],
-	['#31a50d', '#d1b022', '#74482a'],
 	['#ffd077', '#3bc4c7', '#05508a', '#ff4e69', '#461e47'],
+	['#000000', '#f17272', '#f1c7c7', '#c0d051' ],
+	['#4de81c', '#d1b022', '#74482a'],
 ];
 const Skills = [
-	{text: "Honesty", weight: 10},
-	{text: "Software", weight: 5},
-	{text: "Genius", weight: 2},
-	{text: "Creativity", weight: 1},
+	{text: "Angular", weight: 10},
+	{text: "Vue", weight: 10},
+	{text: "Zend", weight: 7},
+	{text: "Android", weight: 10},
+	{text: "AWS", weight: 5},
+	{text: "Google Cloud", weight: 5},
+	{text: "Python", weight: 2},
+	{text: "C/C++", weight: 2},
+	{text: "Java", weight: 2},
+	{text: ".Net", weight: 5},
+	{text: "Full Stack", weight: 6},
+	{text: "Embedded", weight: 2},
+	{text: "PHP", weight: 2},
 ];
 
 const pickRandomFont = function(){
