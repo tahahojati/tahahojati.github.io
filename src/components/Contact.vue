@@ -91,7 +91,7 @@ export default {
 		}
 	},
 	methods: {
-		senddEmail(){
+		sendEmail(){
 			const message = `From: ${this.name} (${this.email})
 			Subject: ${this.subject}
 			**************************************
@@ -108,7 +108,7 @@ export default {
 			this.beforeSendMessage(); 
 			xhr.send(xhrBody); 
 		},
-		sendEmail(){
+		debguSendEmail(){
 			this.beforeSendMessage();
 			this.afterSendMessage(200);
 		},
