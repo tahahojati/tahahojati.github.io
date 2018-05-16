@@ -6,7 +6,7 @@
 
 		:loop="true"
 		nested="inner">
-		<slide v-for="path in imagePaths">
+		<slide v-for="path in imagePaths" :key="path">
 			<img class="center-horizontal" :src="path"/>
 		</slide>
 	</carousel>

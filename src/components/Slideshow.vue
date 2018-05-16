@@ -53,7 +53,7 @@
 	};
 </script>
 
-<style>
+<style scoped>
 
 
 .hovercaption-container {
@@ -61,7 +61,12 @@
   position: relative;
   vertical-align: top;
 }
- 
+ .hovercaption-container p{
+  font-size: 12px;
+ }
+ .hovercaption-container h2{
+  font-size: initial;
+ }
 .hovercaption-image { 
     background: orange;
     border: solid 1px black;

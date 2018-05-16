@@ -9,7 +9,7 @@
 			 paginationColor="#a2a2a2"
 			 :nav="true">
 			 	<template v-if="project !== null">
-				 	<slide  v-for="slide in project.slides">
+				 	<slide  v-for="slide in project.slides" :key="slide.title">
 				 		<component :is="slide.layoutComponent" :slide="slide"/>
 				 	</slide>
 			 	</template>
