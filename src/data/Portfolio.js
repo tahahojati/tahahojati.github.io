@@ -171,8 +171,59 @@ Project.projectList.asshto = new Project({
 	],
 
 });
-Project.projectList.farmsafe = new Project({
+
+Project.projectList.criminalIntent = new Project({
 	id:3,
+	cardBackgroundColor:'grey',
+	title: 'Criminal Intent',
+	cardTitle: null,
+	subtitle: '',
+	cardSubtitle: null,
+	github: 'https://github.com/tahahojati/Android_CriminalIntent',
+	techs: ['Android'],
+	tags: ['__techs__'],
+	cardText: 'Winner of 2018 Hawaii Agricultural Hackathon <br/> an Android app designed to teach ESL farmers about the state\'s standards.',
+	live: null,
+	cardImage: requireImages('./criminalIntent/cardImage-criminalIntent.jpg'),
+	slides:[
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgTop',
+			title: 'Introduction',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./criminalIntent/criminalIntent_big.png'),
+				contentText: null,
+				contentHtml: '<h2> Introduction </h2> <p style="text-align:initial"> CriminalIntent records the details of “office crimes” – things like leaving dirty dishes in the breakroom sink or walking away from an empty shared printer after documents have printed.<br/>With CriminalIntent, you can make a record of a crime including a title, a date, and a photo. You can also identify a suspect from your contacts and lodge a complaint via email, Twitter, Facebook, or another app. After documenting and reporting a crime, you can proceed with your work free of resentment and ready to focus on the business at hand.</p> <p>The code for project is available on <a href="https://github.com/tahahojati/Android_CriminalIntent" target="_blank"> github </a>.  You may also download the apk from there to test the app on your phone. </p>',
+				getContentStyle(){return {background:'#d2d2d259'}},
+				getObjectStyle(){return {width: '100%', height:'auto', 'min-height': '200px', 'object-fit': 'cover'}},
+			},
+		}),
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgLeft',
+			title: 'Design',
+			data: {
+				mode:'img',
+				imgSrc:  requireImages('./criminalIntent/criminalIntent_big.png'),
+				// objectData: {
+				// 	// data must be an array image paths
+				// 	imagePaths: [
+				// 		requireImages('./criminalIntent/criminalIntent_proto1.png'),
+				// 		requireImages('./criminalIntent/criminalIntent_proto2.png'),
+				// 		requireImages('./criminalIntent/criminalIntent_proto3.png'),
+				// 		requireImages('./criminalIntent/criminalIntent_proto4.png'),
+				// 		requireImages('./criminalIntent/criminalIntent_proto5.png'),
+				// 	],
+				// },
+				objectComponent: 'ModalViewImgImgSlideshow',
+				contentHtml:'<h2 class="text-center">Design</h2><p style="text-align:initial">  Development </h2> I wrote the app as a practice project for android development.  The app uses Fragments and displays different UI\'s depending on the size of the device (phones vs tablets).  I took advantage of Android\'s sqlite and ShareCompat classes to develop the app. <br/> <h2> Future enhancements</h2> It is easy to imagine this app as an internet connected app.  Maybe it can be connected to slack. There are lots of possibilities! </p>',
+			}
+		}),	
+	],
+
+});
+
+Project.projectList.farmsafe = new Project({
+	id:7,
 	cardBackgroundColor:'grey',
 	title: 'Farm Akamai',
 	cardTitle: null,
@@ -237,8 +288,101 @@ Project.projectList.farmsafe = new Project({
 	],
 
 });
+
+Project.projectList.javascript_games = new Project({
+	id:8,
+	cardBackgroundColor:'grey',
+	title: 'JavaScript and Phaser.io Games',
+	cardTitle: 'Browser Games',
+	subtitle: '',
+	cardSubtitle: '',
+	techs: ['Phaser', 'Vue'],
+	tags: ['__techs__', 'Front-End Development', 'JavaScript', 'Web' ],
+	github: '',
+	cardText: 'Number of simple games written using JavaScript and various libraries including Phaser.io and Vue.js',
+	live: null,
+	cardImage: requireImages('./javascript_games/cardImage-javascript_games.jpg'),
+	slides:[
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgLeft',
+			title: 'Virtual Pet',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./javascript_games/virtual_pet_play.gif'),
+				contentText: null,
+				contentHtml: '<h2> Virtual Pet </h2> <p style="text-align:initial">  Virtual pet is a game about keeping your pet happy and healthy.  I wrote this game while going through a Udemy course about Phaser.io. I am interested in game development for two reasons: <ol><li>application of aritificial intelligence and </li> <li>using games as engaging media for education</li> </ol> I also find game development interesting due to the challenges of state management, reactive programming, and real-time processing that are required in games.  </p> <p> You can find the code for this project on <a href="https://github.com/tahahojati/virtual_pet_game">github</a>.</p>',
+				// getContentStyle(){return {background:'#d2d2d259'}},
+				// getObjectStyle(){return {width: '100%', height:'260px', 'object-fit': 'cover'}},
+			},
+		}),
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgLeft',
+			title: 'Monster Slayer',
+			data: {
+				mode:'component',
+				objectComponent: 'img',
+				imgSrc: requireImages('./javascript_games/monster_slayer_gameplay.gif'),
+				contentHtml:'<h2 class="text-center">Monster Slayer </h2> <p> Monster slayer is a simple browser game developed using Vue.js.  I wrote this game while going through a Udemy course on Vue.js. <br/> This project is hosted on github at <a href="https://github.com/tahahojati/vue_monster_slayer"> https://github.com/tahahojati/vue_monster_slayer </a> and you can play the game by going <a href="https://tahahojati.github.io/vue_monster_slayer" title="Monster Slayer-Live!"> here </a>.</p>',
+			}
+		}),		
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgLeft',
+			title: 'Frogger',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./javascript_games/frogger_gameplay.gif'),
+				contentHtml:'<h2 class="text-center">Frogger</h2><p style="text-align:initial">This project is a replica of the arcade game frogger. I coded this game using only vanilla javascript as a part of my participation in Udacity\'s Front-End Developer Nanodegree.<br/> You can view the code for this project on <a href="https://github.com/tahahojati/FEWP3-Frogger">github</a> and play the game by visiting <a href="https://tahahojati.github.io/FEWP3-Frogger">here</a>.</p>',
+			}
+		}),	
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgTop',
+			title: 'Farm Animals!',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./javascript_games/farmanimals_phaser_gameplay.gif'),
+				contentHtml:'<h2 class="text-center">Farm Animals</h2><p style="text-align:initial">This is another game developed with Phaser.io.<br/>You can play the game <a href="https://tahahojati.github.io/farm_animals_game_phaser_js">here</a>.  Alternaviely, simply download or clone the <a href="https://github.com/tahahojati/farm_animals_game_phaser_js">github repo</a> and open index.html in your prefered browser.</p>',
+			}
+		}),	
+	],
+
+});
+
+Project.projectList.sandwich_club = new Project({
+	id:9,
+	cardBackgroundColor:'grey',
+	title: 'Sandwich Club',
+	cardTitle: null,
+	subtitle: '',
+	cardSubtitle: null,
+	github: 'https://github.com/tahahojati/SandwichClub',
+	techs: ['Android'],
+	tags: ['__techs__'],
+	cardText: 'An Android app that shows you savory Sandwiches!',
+	live: null,
+	cardImage: requireImages('./sandwich_club/cardImage_sandwich_club.png'),
+	slides:[
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgLeft',
+			title: 'Sandwich Club',
+			data: {
+				mode:'component',
+				objectData: {
+					// data must be an array image paths
+					imagePaths: [
+						requireImages('./sandwich_club/sandwich_club_list.png'),
+						requireImages('./sandwich_club/sandwich_club_detail.png'),
+					],
+				},
+				objectComponent: 'ModalViewImgImgSlideshow',
+				contentHtml:'<h2 class="text-center">Sandwich Club</h2><p style="text-align:initial"><em>Sandwich Club</em> is an Android app that shows you savory Sandwiches! I wrote this app as part of my participation in Udacity\'s Android Developer Nanodegree. The app works by parsing a JSON file and downloading images from the internet.  You may find the code for this project as well instructions for running it on its <a href="https://github.com/tahahojati/SandwichClub/" target="_blank" title="Sandwich Club">Github page</a>.</p>',
+			}
+		}),			
+	],
+
+});
+
 Project.projectList.ristorante = new Project({
-	id:4,
+	id:10,
 	cardBackgroundColor:'grey',
 	title: 'Ristorante con Fusion',
 	cardTitle: 'Ristorante',

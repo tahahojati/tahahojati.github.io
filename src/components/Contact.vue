@@ -72,7 +72,7 @@
 export default {
 	data(){
 		return {
-			awsEmailLambdaUrl: 'https://7chqepj298.execute-api.us-west-2.amazonaws.com/production',
+			awsEmailLambdaUrl: 'https://7chqepj298.execute-api.us-west-2.amazonaws.com/production/ContactFormLambda',
 			message:'',
 			name: '',
 			email: '',
@@ -104,7 +104,7 @@ export default {
 			xhr.setRequestHeader('Content-Type', 'application/json');
 			xhr.onload = () => this.afterSendMessage(xhr.status);
 			xhr.onerror = () => this.afterSendMessage(500);
-			const xhrBody = JSON.stringily({subject, email, message});
+			const xhrBody = JSON.stringify({subject, email, message});
 			this.beforeSendMessage(); 
 			xhr.send(xhrBody); 
 		},

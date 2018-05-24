@@ -46,7 +46,8 @@
 <script>
 import ComponentSlideshow from './Slideshow.vue';
 import {Slideshow} from '../data/About';
-import resumeUrl from '../assets/resume.pdf';
+// import resumeUrl from '../assets/resume.pdf';
+const resumeUrl = 'https://raw.githubusercontent.com/tahahojati/myCV/master/Main/resume.pdf';
 
 export default {
 	data(){
