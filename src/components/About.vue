@@ -6,15 +6,15 @@
 		<div class="text-zone">
 			<h1> About me
 			</h1>
-			<p> I loved math and science since I was a kid. Writing code and making electronics were my side "hobbies" until I graduated from college in 2016.  I have a B.S. in physics; hopefully some day, I will have a noble prize in physics <strong>;-)</strong>
+			<p> I have loved math and science since I was a kid. At the same time, writing code and making electronics were my were part of my interests. I graduated from college in 2016 with a B.S. in physics.  Since then, computer programming has been my focus. I guess I gave up on winning the noble prize for now <strong>;-)</strong>
 			</p>
 			<p><strong>Why you should not hire me:</strong></p>
-			<p>I do not have a computer science degree.  I may be able to code and have completed a bunch of projects but there are glaring gaps in my knowledge of computers. Also, I have been only working for a few years; I'm a junior dev.
+			<p>I do not have a computer science degree.  Also, I have been only working for a few years; I'm a junior dev.  In truth, there are gaps in my knowledge that need filling.
 			</p> 
 			<p>
 				<strong>Why you should hire me:</strong>
 			</p>
-			<p>I'm funny! Also, I work hard and love learning. The gaps in my knowledge get smaller everyday because I read everyday.  I am self-taught so you know I have initiative, and since I don't do my learning for the sake of a grade, I do not cram and my knowledge is deep.  I only have a few years of experience but a look at the number of projects on my github will show you that I have a lot of results to show over the years.
+			<p>I'm funny! Also, I work hard and I am obsessed with learning.  I read everyday, I code everyday, I watch Planet Earth everyday, I'm pretty intense!  I am self-taught so you know I have initiative. I don't do my learning for the sake of a grade, I don't cram and my knowledge is built block by block.  I only have a few years of experience but a look at the number of projects on my github will show my progress since I started my programming career.
 			</p>
 			<p><strong> Things I like: </strong><br/>pianos and guitars, soccer, tennis, good hikes, money, Paint Nite
 			</p>

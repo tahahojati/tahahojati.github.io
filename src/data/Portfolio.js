@@ -172,17 +172,48 @@ Project.projectList.asshto = new Project({
 
 });
 
+
 Project.projectList.criminalIntent = new Project({
 	id:3,
 	cardBackgroundColor:'grey',
-	title: 'Criminal Intent',
+	title: 'Poppin\' Movies',
+	cardTitle: null,
+	subtitle: '',
+	cardSubtitle: null,
+	github: 'https://github.com/tahahojati/popularmovies',
+	techs: ['Android'],
+	tags: ['__techs__'],
+	cardText: 'It turns out you are the only one who hasn\'t watched the new Avengers!!??',
+	live: null,
+	cardImage: requireImages('./popularMovies/cardImage-popularMovies.jpg'),
+	slides:[
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgLeft',
+			title: 'Introduction',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./popularMovies/popular_movies_use.gif'),
+				contentText: null,
+				contentHtml: '<h2> Introduction </h2> <p style="text-align:initial"> Poppin\' Movies is an Android client for <em>themoviedb.org</em>. It allows users to see a list of movies that are currently playing in theaters and to add the movies to their list of favorites.  The saves the favorite movies on phone\'s storage so they are available when offline.  In addition, the app provides a movie ContentProvider that can be used by other apps.</p> <p>This project is still under development (for the next few weeks at least).  The code for project is available on <a href="https://github.com/tahahojati/popularmovies" target="_blank"> github </a>.  Once finished, you may also download the apk from there to test the app on your phone.</p>',
+				getContentStyle(){return {background:'#d2d2d259'}},
+				getObjectStyle(){return {width: '100%', height:'auto', 'min-height': '200px', 'object-fit': 'cover'}},
+			},
+		}),
+	],
+
+});
+
+Project.projectList.popularMovies = new Project({
+	id:3,
+	cardBackgroundColor:'grey',
+	title: 'Poppin\' Movies',
 	cardTitle: null,
 	subtitle: '',
 	cardSubtitle: null,
 	github: 'https://github.com/tahahojati/Android_CriminalIntent',
 	techs: ['Android'],
 	tags: ['__techs__'],
-	cardText: 'Winner of 2018 Hawaii Agricultural Hackathon <br/> an Android app designed to teach ESL farmers about the state\'s standards.',
+	cardText: 'Stop crime, save the world!',
 	live: null,
 	cardImage: requireImages('./criminalIntent/cardImage-criminalIntent.jpg'),
 	slides:[
@@ -310,7 +341,7 @@ Project.projectList.javascript_games = new Project({
 				mode:'img',
 				imgSrc: requireImages('./javascript_games/virtual_pet_play.gif'),
 				contentText: null,
-				contentHtml: '<h2> Virtual Pet </h2> <p style="text-align:initial">  Virtual pet is a game about keeping your pet happy and healthy.  I wrote this game while going through a Udemy course about Phaser.io. I am interested in game development for two reasons: <ol><li>application of aritificial intelligence and </li> <li>using games as engaging media for education</li> </ol> I also find game development interesting due to the challenges of state management, reactive programming, and real-time processing that are required in games.  </p> <p> You can find the code for this project on <a href="https://github.com/tahahojati/virtual_pet_game">github</a>.</p>',
+				contentHtml: '<h2> Virtual Pet </h2> <p style="text-align:initial">  Virtual pet is a game about keeping your pet happy and healthy.  I wrote this game while going through a Udemy course about Phaser.io. I am interested in game development for two reasons: <ol><li>application of aritificial intelligence and </li> <li>using games as engaging media for education</li> </ol> I also find game development interesting due to the challenges of state management, reactive programming, and real-time processing that are required in games.  </p> <p> You can find the code for this project on <a href="https://github.com/tahahojati/virtual_pet_game" >github</a> or play the game <a href="https://tahahojati.github.io/virtual_pet_game/" target="_blank" title="Virtual Pet Live!">here</a>.</p>',
 				// getContentStyle(){return {background:'#d2d2d259'}},
 				// getObjectStyle(){return {width: '100%', height:'260px', 'object-fit': 'cover'}},
 			},
@@ -319,8 +350,7 @@ Project.projectList.javascript_games = new Project({
 			layoutComponent: 'ModalViewImgLeft',
 			title: 'Monster Slayer',
 			data: {
-				mode:'component',
-				objectComponent: 'img',
+				mode:'img',
 				imgSrc: requireImages('./javascript_games/monster_slayer_gameplay.gif'),
 				contentHtml:'<h2 class="text-center">Monster Slayer </h2> <p> Monster slayer is a simple browser game developed using Vue.js.  I wrote this game while going through a Udemy course on Vue.js. <br/> This project is hosted on github at <a href="https://github.com/tahahojati/vue_monster_slayer"> https://github.com/tahahojati/vue_monster_slayer </a> and you can play the game by going <a href="https://tahahojati.github.io/vue_monster_slayer" title="Monster Slayer-Live!"> here </a>.</p>',
 			}

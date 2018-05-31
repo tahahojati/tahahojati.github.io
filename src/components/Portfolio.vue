@@ -1,7 +1,7 @@
 <template>
 <div>
 	<project-modal ref="modal" :project="modalProject"> </project-modal>
-	<div class="my-container container-fluid portfolio" style="opacity:1">	
+	<div class="my-container y-scroll container-fluid portfolio" style="opacity:1">	
 		<div class="row">
 			<article v-for="project of projects" class="col-12 col-sm-6 col-lg-4 col-xl-3">
 				<div class=" card" @click="openModal(project)" :style="project.getCardStyle()">
