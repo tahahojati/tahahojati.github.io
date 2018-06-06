@@ -2,6 +2,7 @@
 	<div>
 		<div class="col-xs-12" style="border-bottom: dotted 1px black; padding-bottom:5px">
 			<img v-if="data.mode === 'img'" class="img-responsive top-modal-slide-img" :src="data.imgSrc" :style="data.hasOwnProperty('getObjectStyle')?data.getObjectStyle():null"/>
+			<div v-else-if="data.mode === 'text'" v-html="data.contentHtml"  :style="data.hasOwnProperty('getObjectStyle')?data.getObjectStyle():null" > </div>
 			<component v-else :is="data.objectComponent" :style="data.hasOwnProperty('getObjectStyle')?data.getObjectStyle():null"></component>
 		</div>
 	</div>

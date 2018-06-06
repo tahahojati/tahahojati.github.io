@@ -70,6 +70,122 @@ Project.Slide = class {
 	};
 };
 Project.projectList = {};
+Project.projectList.portfolio = new Project({
+	id:0,
+	cardBackgroundColor:'grey',
+	title: 'Portflio',
+	cardTitle: null,
+	subtitle: '',
+	cardSubtitle: null,
+	github: '',
+	techs: ['Android', 'Vue', 'Angular', 'Bootstrap'],
+	tags: ['__techs__', 'Front-End'],
+	cardText: 'if you are curious about my old and new Developer portfolios',
+	live: null,
+	cardImage: requireImages('./developer_portfolio/cardImage-developer_portfolio.png'),
+	slides:[
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgTop',
+			title: 'Introduction',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./developer_portfolio/new_dev_portfolio.png'),
+				contentText: null,
+				contentHtml: '<h2> My Portflio </h2> <p style="text-align:initial"> The portflio you are viewing is not the only one I have created. It is however, the latest.  I wrote this website using Vue.js and am hosting it on Amazon AWS. The code for this website is available on my <a href="https://github.com/tahahojati/tahahojati.github.io/tree/vue"> github </a>, so feel free to take a look.  I work on this portfolio in my spare time; it is a work in progress and not that well tested hehe. So let me know if something is broken (or if you want to hire me) :)</p>',
+				getContentStyle(){return {background:'#d2d2d259'}},
+				getObjectStyle(){return {width: '100%', height:'auto', 'min-height': '200px', 'object-fit': 'cover'}},
+			},
+		}),
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgLeft',
+			title: 'Introduction',
+			data: {
+				mode:'component',
+				objectData: {
+					// data must be an array image paths
+					imagePaths: [
+						requireImages('./developer_portfolio/android_dev_portfolio_image1.png'),
+						requireImages('./developer_portfolio/android_dev_portfolio_image2.png'),
+					],
+				},
+				objectComponent: 'ModalViewImgImgSlideshow',
+				contentHtml:'<h2 class="text-center">Android Portflio</h2><p style="text-align:initial"> I consider creating portfolios a great way to practice software development: they pose a moderate level of difficulty and the outcome is generally useful.  I wrote this Android app when I was just starting to get comfortable with Android and wanted to practice using components such as CardView and CoordinatorLayout.  If you want to look at the app, you can find it on my <a href="https://github.com/tahahojati/Android_portfolio_app">github</a>.</p>',
+			},
+		}),
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgTop',
+			title: 'Introduction',
+			data: {
+				mode:'img',
+				imgSrc: requireImages('./developer_portfolio/old_dev_portfolio.png'),
+				contentText: null,
+				contentHtml: '<h2> My old portflio </h2> <p style="text-align:initial"> Long ago, I used to be pretty good at Angular.  So one weekend I sat down and made a portfolio website for myself and hosted it on github pages.  It is still online <a href="https://tahahojati.github.io">here</a>.  It doesn\'t have all the bells and whistles of this website, but sometimes I think its simpllicity makes it even better.  <a href="https://tahahojati.github.io">Take a look at it </a> and its code on <a href="https://github.com/tahahojati/tahahojati.github.io/tree/master">github</a> and remember, I can do Angular (or at least kinda used to).</p>',
+				getContentStyle(){return {background:'#d2d2d259'}},
+				getObjectStyle(){return {width: '100%', height:'auto', 'min-height': '200px', 'object-fit': 'cover'}},
+			},
+		}),
+	],
+
+});
+
+Project.projectList.reflex_game = new Project({
+	id:0,
+	cardBackgroundColor:'grey',
+	title: 'Reflex Game',
+	cardTitle: null,
+	subtitle: 'An Android game to test your reflexes',
+	cardSubtitle: null,
+	github: 'https://github.com/tahahojati/ReflexGame',
+	techs: ['Android'],
+	tags: ['__techs__',],
+	cardText: 'An Android game to test your reflexes',
+	live: null,
+	cardImage: requireImages('./reflex_game/cardImage-reflex_game.png'),
+	slides:[
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgOnly',
+			title: 'Introduction',
+			data: {
+				mode:'img',
+				getObjectStyle(){return{
+					border: '3px solid black',
+					width: '100%'
+				}},
+				imgSrc: requireImages('./reflex_game/reflex_playthrough.gif'),
+				contentText: null,
+				getContentStyle(){return {background:'#d2d2d259'}},
+				// getObjectStyle(){return {width: '100%', height:'auto', 'min-height': '200px', 'object-fit': 'cover'}},
+			},
+		}),
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgOnly',
+			title: 'Introduction',
+			data: {
+				mode:'text',
+				getObjectStyle(){return{
+					margin:'10px',
+				}},
+				contentHtml: '<article><h3>Overview</h3><p>This is a simple Android game. The objective of the game is to tap the circle spots on the screen before they disappear.  You start with 5 lives and the game ends when you lose all of them.</p><h3>Download</h3><p>This app is not available on Google play (maybe after some enhancements!). For now, you may download <a href="https://github.com/tahahojati/ReflexGame/blob/master/readme/app-debug.apk">the apk</a> and install it on your Android phone via usb.  Alternatively, you can clone the repo and use Android Studio to run the app on your Android phone.</p><h3>Future enhancements</h3><p>I had bigger dreams for this game. It\'s easy to see it becoming the new Flappy Bird.  But I think I have already implemented what I initially set out to implement and it is time to move on. I will likely add the ability to share the highscores on social media at some point and release the game... idk..</p></article>',
+				// getObjectStyle(){return {width: '100%', height:'auto', 'min-height': '200px', 'object-fit': 'cover'}},
+			},
+		}),
+		new Project.Slide({
+			layoutComponent: 'ModalViewImgOnly',
+			title: 'Introduction',
+			data: {
+				mode:'text',
+				getObjectStyle(){return{
+					margin: '20px',
+				}},
+				contentHtml: '<article><h3>Development</h3><p>I developed this app using only Android SDK and Java. Here are some of the challenges I faced:</p><ul style="list-style: square"><li>Architecture: from the beginning I wanted to design the app in a way that separated game logic from the view logic. With this purpose, I divided the majority of logic for the game in three classes: 1) Game - a classes representing the state of the game, 2) GameRunner - the class performing all of the game logic and 3) GameView - an interface describing all that was required of the view layer; the interface was implemented by my Activity.</li><li>Parallel processing: I implemented this app such that the game logic runs in a secondary thread.  Implementing this was hard.  I wanted a dedicated thread to which I could submit my game logic as a runnable.  I could not achieve the effect I wanted using standard ExecutorServices and Looper/Handler Threads, however what I designed looks a little like a looper thread.</li><li>Animations and collision detection: working with Android\'s animators is not that intuitive, but the real challenge here was to code the spots\' movements such that they would bounce from the walls. A typical game engine might do this using collision detection, but I thought that was an overkill for this game. What I set out to do was instead to figure out the trajectory of each spot at the moment of its creation and figure out when and how it should bounce from the borders of the layout. I then created an Android ObjectAnimator for each spot that contained the bouncing informaion. I do not remember how I coded this, but I am proud of the result. </li></ul></article>',
+				// getObjectStyle(){return {width: '100%', height:'auto', 'min-height': '200px', 'object-fit': 'cover'}},
+			},
+		}),
+		
+	],
+
+});
+
 Project.projectList.opihi = new Project({
 	id:1,
 	cardBackgroundColor:'grey',
@@ -173,7 +289,7 @@ Project.projectList.asshto = new Project({
 });
 
 
-Project.projectList.criminalIntent = new Project({
+Project.projectList.popularmovies = new Project({
 	id:3,
 	cardBackgroundColor:'grey',
 	title: 'Poppin\' Movies',
@@ -203,10 +319,10 @@ Project.projectList.criminalIntent = new Project({
 
 });
 
-Project.projectList.popularMovies = new Project({
+Project.projectList.criminalIntent = new Project({
 	id:3,
 	cardBackgroundColor:'grey',
-	title: 'Poppin\' Movies',
+	title: 'Criminal Intent',
 	cardTitle: null,
 	subtitle: '',
 	cardSubtitle: null,
